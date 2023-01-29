@@ -1,0 +1,226 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+html{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+body{
+    background-color: rgb(230, 230, 230);
+}
+
+.content{
+    width: 1100px;
+    height: 100%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.main{
+    width: 700px;
+    height: 100%;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 10px, rgba(0, 0, 0, 0.22) 0px 0px 10px;
+}
+
+.basketList{
+    width: 800px;
+    height: 100%;
+}
+
+.nextTo{
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+form, .checklist{
+    width: 800px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.number{
+    margin-left: 25px;
+}
+
+.resume{
+    width: 300px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 10px, rgba(0, 0, 0, 0.22) 0px 0px 10px;
+    position: sticky;
+    top: 25px;
+}
+
+.basket{
+    width: 600px;
+    height: 100%;
+    margin-top: 35px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ol{
+    width: 250px;
+    height: 250px;
+    margin: 25px 0 0 -70px;
+    color: goldenrod;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.product{
+    width: 550px;
+    height: 50px;
+    margin: 20px 0 0 0;
+    padding: 0 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: cornflowerblue;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 10px, rgba(0, 0, 0, 0.22) 0px 0px 10px;
+    border-radius: 10px;
+}
+
+
+input, .number{
+    width: 300px;
+    height: 30px;
+    border-radius: 15px;
+    border: 2px solid silver;
+    outline: none;
+    padding-left: 5px;
+}
+
+.number{
+    width: 100px;
+    height: 30px;
+}
+
+.checkbox{
+    width: 20px;
+    height: 20px;
+}
+
+h1{
+    color: red;
+}
+
+span, p{
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    color: orangered;
+}
+
+p{
+    margin-left: 5px;
+}
+
+a{
+    height: 25px;
+    width: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: rgb(17, 205, 17) solid 2px;
+    color: black;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    background: rgb(33, 240, 33);
+}
+
+.remove{
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    font-size: 18px;
+    font-weight: bold;
+    border: 2px solid rgb(200, 0, 0);
+    background-color: red;
+    border-radius: 15px;
+    cursor: pointer;
+    outline: none;
+}
+
+a:visited{
+    color: black;
+}
+
+a:hover{
+    background-color: rgb(82, 255, 47);
+    color: white;
+    transition: color 250ms;
+}
+
+.remove:hover{
+    background-color: orangered;
+    color: white;
+    transition: color 250ms;
+}
+
+@media only screen and (max-width: 600px) {
+    html, body{
+        overflow-x: hidden;
+    }
+
+    .content{
+        width: 70%;
+    }
+
+    .main{
+        width: 60%;
+    }
+
+    .basket{
+        width: 20%;
+    }
+
+    .adress{
+        width: 45%;
+    }
+
+    .product{
+        width: 95%;
+        font-size: 13px;
+    }
+
+    input, .number{
+        width: 15%;
+        font-size: 12px;
+    }
+
+    .resume{
+        width: 40%;
+        margin-left: 15px;
+    }
+    
+    span, p{
+        font-size: 16px;
+    }
+
+    h1{
+        font-size: 18px;
+    }
+}

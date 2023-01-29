@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podsumowanie</title>
+    
+    <link rel="stylesheet" href="podsumowanie.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="content">
+        <section class="main">
+            <span>Koszyk:</span>
+            <div class="basketList"></div>
+            <form>
+                <span>Dane osobowe:</span>
+                <input type="text" placeholder="Imię"/>
+                <input type="text" placeholder="Nazwisko"/>
+                <section class="adress">
+                    <input type="text" placeholder="Ulica"/>
+                    <input type="number" class="number" placeholder="Nr. domu"/>
+                </section>
+                <input type="mail" placeholder="Email"/>
+            </form>
+            <div class="checklist">
+                <span>Dostawa:</span>
+                <label><input id="parcelLocker" type="checkbox" class="checkbox"/> Paczkomat - 10zł</label>
+                <label><input id="deliveryMan" type="checkbox" class="checkbox"/> Kurier - 15zł</label>
+                <label><input id="post" type="checkbox" class="checkbox"/> Poczta Polska - 12zł</label>
+            </div>
+            <div class="checklist">
+                <span>Płatność:</span>
+                <label><input id="traditionalTransfer" type="checkbox" class="checkbox"/> Przelew tradycyjny</label>
+                <label><input id="fastTransfer" type="checkbox" class="checkbox"/> Szybki przelew</label>
+                <label><input id="blik" type="checkbox" class="checkbox"/> Blik</label>
+            </div>
+        </section>
+        <div class="resume">
+            <section class="nextTo">
+                <h1>Suma:</h1><p></p>
+            </section>
+            <a href="podziekowania.html">Płacę</a>
+        </div>
+    </div>
+    <script src="podsumowanie.js"></script>
+</body>
+</html>

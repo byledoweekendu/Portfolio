@@ -1,0 +1,79 @@
+html{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+body{
+    background-color: rgb(230, 230, 230);
+}
+
+span{
+    font-size: 64px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    color: gold;
+    position: absolute;
+    top: 250px;
+    left: 400px;
+}
+
+a{
+    font-size: 20px;
+    font-family: 'Roboto Condensed', sans-serif;
+    position: absolute;
+    bottom: 250px;
+    right: 400px;
+    text-decoration: none;
+    color: orangered;
+}
+
+a:visited{
+    color: orangered;
+}
+
+a:hover{
+    color: rgb(206, 84, 39);
+    transition: color 300ms;
+}
+
+@media only screen and (max-width: 1366px) {
+    span{
+        font-size: 40px;
+        top: 200px;
+        left: 300px;
+    }
+    
+    a{
+        font-size: 18px;
+        bottom: 200px;
+        right: 300px;
+    }
+  }
+  
+  @media only screen and (max-width: 991px) {
+    span{
+        font-size: 40px;
+        top: 200px;
+        left: 100px;
+    }
+    
+    a{
+        font-size: 18px;
+        bottom: 200px;
+        right: 100px;
+    }
+  }
+  
+  @media only screen and (max-width: 600px) {
+    span{
+        font-size: 35px;
+        top: 200px;
+        left: 50px;
+    }
+    
+    a{
+        font-size: 18px;
+        bottom: 200px;
+        right: 50px;
+    }
+  }

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Przykładowy sklep</title>
+
+    <link rel="stylesheet" href="sklep.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+</head>
+<body>
+   <div class="container">
+    <div id="filterList"></div>
+    <div class="content">
+        <nav>
+            <section class="group">
+                <button class="main">Sklep.pl</button>
+                <input type="search" class="searchBar" placeholder="Czego szukasz?"/>
+                <a href="#footer" class="btn"><img src="minatures/pomoc.png" alt="Kontakt"></a>
+                <section class="positionForBasketIconNav">
+                    <p id="basketCounter" class="basketCounterNav"></p>
+                    <button id="basket" class="btn"><img src="minatures/koszyk.png" alt="koszyk"></button>
+                </section>
+                <div class="sub-menu">
+                    <button class="formButton">Zaloguj się</button>
+                    <form class="loginForm">
+                        <input type="text" placeholder="Email"/>
+                        <input type="password" placeholder="Password"/>
+                        <button class="formButton">Zaloguj</button>
+                        <span>Nie masz jeszcze konta?</span>
+                        <a href = "rejestracja.html" class="formButton">Zarejestruj się</a>
+                    </form>
+                </div>
+            </section>
+            <section class="group2">
+            <button id="pc" class="btn">PC</button>
+            <button id="monitors" class="btn">Monitory</button>
+            <button id="headsets" class="btn">Słuchawki</button>             
+            <button id="mouses" class="btn">Myszy</button>
+            <button id="keyboards" class="btn">Klawiatury</button>
+            </section>
+        </nav>
+        <h1 id="h1">Polecane</h1>
+        <div id="list"></div>
+    </div>
+  </div>  
+    <div id="footer">
+        <form class="contact">
+            <p>Wyślij nam wiadomość</p>
+            <input id="mail" name="mail" type="mail" placeholder="Wpisz swój email"/>
+            <textarea id="msg" name="msg" rows="5" placeholder="Wpisz wiadomość"></textarea>
+            <input id="send" value="Wyślij" type="submit"/>
+        </form>
+        <p>Telefon: +48 456 678 980</p>
+        <p>Fax: 81 563 21 59</p>
+    </div>
+<script src="sklep.js"></script>
+</body>
+</html>
