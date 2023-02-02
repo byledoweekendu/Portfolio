@@ -9,21 +9,21 @@ html{
 
 body{
     margin: 0;
-    padding: 0;
-    border: none;
+    border: 0;
     background-color: rgb(230, 230, 230);
 }
 
 .container{
-    width: 100%;
+    width: 1400px;
     height: 100%;
     margin: 25px auto;
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
 .content{
-    width: 1400px;
+    width: 1100px;
     height: 900px;
     margin-left: 30px;
     padding: 5px;
@@ -33,7 +33,7 @@ body{
 }
 
 nav{
-    width: 1400px;
+    width: 1100px;
     height: 125px;
     display: flex;
     flex-direction: column;
@@ -46,7 +46,7 @@ nav{
 }
 
 .listNormal{
-    width: 1400px;
+    width: 1100px;
     height: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -89,7 +89,7 @@ nav{
 }
 
 .group, .group2{
-    width: 1400px;
+    width: 1100px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -151,7 +151,7 @@ nav{
     height: 275px;
     width: 250px;
     top: 44px;
-    right: -25px;
+    right: -5px;
     z-index: 1;
 }
 
@@ -202,7 +202,7 @@ ol{
     width: 100%;
     height: 300px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     margin: 75px 0 25px 0;
     background-color: rgb(215, 215, 215);
@@ -296,7 +296,7 @@ input{
 }
 
 .searchBar{
-    width: 700px;
+    width: 500px;
     height: 30px;
     padding-left: 5px;
 }
@@ -353,6 +353,7 @@ span{
 p{
     font-size: 18px;
     font-weight: bold;
+    margin-left: 275px;
 }
 
 .special, .specialVisible{
@@ -446,6 +447,9 @@ nav .sub-menu:hover .loginForm{
 }
 
 @media only screen and (max-width: 1366px) {
+    .container{
+        width: 90%;
+    }
     .content{
         width: 80%;
     }
@@ -475,9 +479,33 @@ nav .sub-menu:hover .loginForm{
     .positionForBasketIcon{
         width: 90%;
     }
+    p{
+        margin-left: 150px;
+    }
+  }
+
+  @media only screen and (max-width: 1200px){
+    p{
+        margin-left: 100px;
+    }
+    ol{
+        margin-left: -40px;
+    }
+  }
+
+  @media only screen and (max-width: 1048px){
+    p{
+        margin-left: 75px;
+    }
+    ol{
+        margin-left: -15px;
+    }
   }
   
   @media only screen and (max-width: 991px) {
+    .container{
+        width: 95%;
+    }
     .listNormal, .tile, .miniature, .specification{
         width: 95%;
     }
@@ -505,6 +533,36 @@ nav .sub-menu:hover .loginForm{
     }
     .positionForBasketIcon{
         width: 120%;
+    }
+    p{
+        margin-left: 75px;
+    }
+  }
+
+  @media only screen and (max-width: 824px){
+    p{
+        margin-left: 0;
+    }
+    #footer{
+        flex-direction: column;
+        padding: 10px;
+    }
+    #send{
+        margin: 5px 0 5px 0;
+    }
+    .formButton{
+        height: 30px;
+        font-size: 15px;
+        margin-left: 15px;
+    }
+    .main{
+        margin-right: 10px;
+    }
+    .positionForBasketIconNav{
+        margin-left: 10px;
+    }
+    textarea{
+        margin-top: 5px;
     }
   }
   
@@ -589,7 +647,7 @@ nav .sub-menu:hover .loginForm{
         font-size: 14px;
     }
     #addToBasket{
-        margin-right: 120px;
+        margin-right: 140px;
     }
     #footer{
         flex-direction: column;
@@ -607,6 +665,7 @@ nav .sub-menu:hover .loginForm{
     }
     p{
         font-size: 15px;
+        margin-left: 0;
     }
     .specialVisible{
         top: 520px;
@@ -622,7 +681,7 @@ nav .sub-menu:hover .loginForm{
 
 @media only screen and (max-width: 500px) {
     nav{
-        left: 50px;
+        left: 70px;
     }
     .filterList{
         height: 55%;
@@ -630,6 +689,14 @@ nav .sub-menu:hover .loginForm{
     }
     .specialVisible{
         left: 165px;
+    }
+    .searchBar{
+        margin: 10px 0;
+        width: 90%;
+        height: 50px;
+    }
+    #addToBasket{
+        margin-right: 120px;
     }
 }
 
@@ -648,5 +715,18 @@ nav .sub-menu:hover .loginForm{
     
     .specialVisible{
         left: 135px;
+    }
+
+    .searchBar{
+        margin: 10px 0;
+        width: 115%;
+        height: 50px;
+    }
+    ol{
+        margin: 25px 0 0 10px;
+        font-size: 13px;
+    }
+    #addToBasket{
+        margin-right: 100px;
     }
 }

@@ -3,206 +3,200 @@
 }
 
 html{
-    scroll-behavior: smooth;
     font-family: 'Roboto Condensed', sans-serif;
 }
 
 body{
-    background-color: rgb(40, 40, 40);
+    background-color: rgb(50, 50, 50);
     margin: 0;
-}
-
-#container{
-    position: relative;
-    height: 100%;
-    width: 1400px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-}
-
-nav{
-    width: 1400px;
-    height: 40px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    margin-top: 25px;
-    z-index: 1;
+    border: 0;
 }
 
 #header{
     width: 100%;
-    height: 300px;
+    height: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(20, 20, 20);
     margin: 0 auto;
+    background-color: rgb(25, 25, 25);
 }
 
-#content{
-    width: 1400px;
-    height: 100%;
-    margin: 0 auto;
+#prof{
+    width: 200px;
+    height: 200px;
+    border-radius: 150px;
+    box-shadow: silver 0px 0px 10px;
+}
+
+#nameAndProfession{
+    width: 300px;
+    height: 75px;
+    margin-left: 25px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: center;
-}
-
-.prof{
-    width: 250px;
-    height: 250px;
-    border-radius: 150px;
-    box-shadow: silver 0px 0px 12px;
-}
-
-#basicInfo{
-    width: 1000px;
-    height: 250px;
-    display: flex;
-    flex-direction: column;
-    margin: 50px 0 0 50px;
-}
-
-#name{
-    font-size: 30px;
-    font-weight: bold;
-    font-style: italic;
-    color: orangered;
-}
-
-#description{
-    font-size: 22px;
-    font-weight: bold;
-    margin-top: 10px;
-    color: gold;
 }
 
 #describe{
+    width: 590px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: white;
     font-size: 18px;
-    margin-top: 10px;
-    color: white;
-}
-
-.group{
-    width: 1400px;
-    height: 200px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 50px;
-}
-
-.group2{
-    width: 1400px;
-    height: 200px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 100px;
-}
-
-.tile{
-    width: 340px;
-    height: 190px;
-    padding: 5px;
-    font-size: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     text-align: center;
-    box-shadow: gray 0px 0px 12px;
-    border-radius: 15px;
-    color: white;
 }
 
-.tile2{
-    width: 340px;
-    height: 190px;
-    padding: 5px;
-    margin-top: 10px;
-    font-size: 16px;
+.langTile{
+    width: 50px;
+    height: 25px;
+    margin: 0 0 200px 25px;
+}
+
+.langImg{
+    border-radius: 0;
+}
+
+#name{
+    color: orangered;
+    font-size: 30px;
     font-weight: bold;
+    font-style: italic;
+}
+
+#profession{
+    color: gold;
+    font-size: 22px;
+    font-weight: bold;  
+}
+
+#clock{
+    width: 400px;
+    height: 200px;
+    margin-top: 90px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-end;
+    font-size: 27px;
+    font-weight: bold;
+    font-style: italic;
+    color: greenyellow;
     text-align: center;
-    color: white;
 }
 
-.projectTile{
-    width: 340px;
+#content{
+    width: 1200px;
     height: 500px;
-    padding: 5px;
-    font-size: 20px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
-.skillTile1, .skillTile2, .skillBranch{
+#info{
+    width: 1150px;
+    height: 300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav{
+    width: 500px;
+    height: 260px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+a, button{
+    text-decoration: none;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}
+
+img{
+    border-radius: 10px;
+}
+
+.navTile{
+    width: 145px;
+    height: 110px;
+    padding: 5px;
     font-size: 20px;
     font-weight: bold;
     font-style: italic;
-    color: goldenrod;
-    display: flex;
-    align-items: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    cursor: pointer;
+    color: white;
 }
 
-.skillTile1{
-    margin-right: 50px;
+#skills{
+    background-color: red;
 }
 
-.skillTile2{
-    margin-left: 50px;
+#school{
+    background-color: green;
 }
 
-.skillBranch{
-    font-style: normal;
-    color: silver;
+#exp{
+    background-color: purple;
 }
 
-#skills, #projects{
-    height: 850px;
-    width: 1400px;
+#abilities{
+    background-color: orchid;
+}
+
+#interested{
+    background-color: cornflowerblue ;
+}
+
+#languages{
+    background-color: blueviolet ;
+}
+
+#display{
+    width: 590px;
+    height: 220px;
+    padding: 10px;
+    margin-top: -20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 25px;
-}
-
-#skills{
-    flex-direction: row;
-    margin-top: 100px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    box-shadow: silver 0px 0px 10px;
+    border-radius: 10px;
 }
 
 #projects{
-    height: 750px;
-}
-
-#treeL, #treeR{
-    width: 300px;
-    height: 750px;
+    width: 1130px;
+    height: 200px;
+    margin-top: -30px;
     display: flex;
-    flex-direction: column;
-    position: relative;
+    justify-content: space-between;
+    align-items: center;
 }
 
-#treeL{
-    border-right: 1px solid silver;
-    align-items: flex-end;
+.projectTile{
+    width: 300px;
+    height: 150px;
 }
 
-#treeR{
-    border-left: 1px solid silver;
-    align-items: flex-start;
+#footer{
+    width: 100%;
+    height: 300px;
+    margin: 50px auto 25px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(35, 35, 35);
 }
 
 form{
@@ -212,70 +206,10 @@ form{
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    margin: -50px -125px 0 0;
+    margin-top: -75px;
     box-shadow: gray 0px 0px 12px;
     border-radius: 15px;
     background-color: rgb(30, 30, 30);
-}
-
-#skill1{
-    position: absolute;
-    top: 100px;
-}
-
-#skill2{
-    position: absolute;
-    top: 200px;
-}
-
-#skill3{
-    position: absolute;
-    top: 600px;
-}
-
-#skill4{
-    position: absolute;
-    top: 300px;
-}
-
-#skill5{
-    position: absolute;
-    top: 400px;
-}
-
-#skill6{
-    position: absolute;
-    top: 500px;
-}
-
-#branch1{
-    position: absolute;
-    top: 95px;
-}
-
-#branch2{
-    position: absolute;
-    top: 195px;
-}
-
-#branch3{
-    position: absolute;
-    top: 595px;
-}
-
-#branch4{
-    position: absolute;
-    top: 295px;
-}
-
-#branch5{
-    position: absolute;
-    top: 395px;
-}
-
-#branch6{
-    position: absolute;
-    top: 495px;
 }
 
 #fullName, #mail, 
@@ -293,66 +227,11 @@ textarea{
     height: 100px;
 }
 
-#footer{
-    width: 100%;
-    height: 300px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 25px 0 25px 0;
-    background-color: rgb(20, 20, 20);
-}
-
-img{
-    border-radius: 25px;
-    box-shadow: gray 0px 0px 12px;
-}
-
-p{
-    font-size: 18px;
-    font-weight: bold;
-    color: goldenrod;
-}
-
-.btn{
-    height: 50px;
-    width: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: cornflowerblue;
-    text-align: center;
-    text-decoration: none;
-    margin-right: 15px;
-    font-size: 18px;
-    font-weight: bold;
-    outline: none;
-}
-
-.icons{
-    width: 1100px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.icon{
-    box-shadow: 0 0 0;
-}
-
-.treeIcon{
-    width: 25px;
-    height: 25px;
-    border-radius: 5px;
-    box-shadow: 0 0 0 ;
-    margin-right: 5px;
-}
-
 #send{
     height: 25px;
     width: 75px;
-    border-radius: 5px;
     margin: 10px 0;
+    border-radius: 5px;
     border: rgb(17, 205, 17) solid 2px;
     outline: none;
     cursor: pointer;
@@ -361,13 +240,58 @@ p{
     background: rgb(33, 240, 33);
 }
 
-.btn:visited{
-    color: cornflowerblue;
+.contactTile, .contactImg{
+    width: 90px;
+    height: 90px;
 }
 
-.btn:hover{
-    color: rgb(138, 177, 250);
-    transition: color 300ms;
+#icons{
+    width: 800px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 100px;
+}
+
+b{
+    color: goldenrod;
+}
+
+p{
+    color: beige;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.navTile:hover, .projectTile:hover, .contactTile:hover, .langImg:hover{
+    box-shadow: silver 0px 0px 10px;
+    margin-top: -7px;
+    color: rgb(225, 225, 225);
+    transition: margin-top 300ms;
+}
+
+#skills:hover{
+    background-color: rgb(255, 67, 67);
+}
+
+#school:hover{
+    background-color: rgb(1, 184, 1);
+}
+
+#exp:hover{
+    background-color: rgb(180, 34, 180);
+}
+
+#abilities:hover{
+    background-color: rgb(255, 138, 251);
+}
+
+#interested:hover{
+    background-color: rgb(134, 176, 255) ;
+}
+
+#languages:hover{
+    background-color: rgb(169, 77, 255) ;
 }
 
 #send:hover{
@@ -376,277 +300,409 @@ p{
     transition: color 300ms;
 }
 
-.icon:hover{
-    box-shadow: gray 0px 0px 12px;
-}
-@media only screen and (max-width: 1366px) {
-    body{
-        overflow-x: hidden;
+  @media only screen and (max-width: 1366px) {
+    #info, nav, #display, #projects{
+        width: 85%;
     }
-    #container{
-        width: 100%;
-    }
-
-    #content{
-        width: 90%;
-    }
-
-    nav{
-        width: 100%;
-    }
-
-    .group, .group2{
-        width: 100%;
-    }
-
-    .tile{
-        width: 30%;
-    }
-
-    .tile2{
-        width: 70%;
-    }
-
-    #projects{
-        width: 100%;
-        height: 700px;
-        margin: 0;
-    }
-
-    .projectTile{
-        width: 90%;
-        margin: 0;
-    }
-
-    img{
-        width: 90%;
-    }
-
-    .icons{
-        height: 200px;
-        width: 700px;
-        display: flex;
-        justify-content: space-around;
-        margin-left: 100px;
-    }
-
-  }
-  
-  @media only screen and (max-width: 991px) {
-    html, body{
-        overflow-x: hidden;
-    }
-
-    #container{
-        width: 100%;
-    }
-
-    #content{
-        width: 80%;
-    }
-
-    nav{
-        width: 100%;
-    }
-
-    #header{
-        height: 450px;
-        width: 100%;
-        padding: 0 50px;
-    }
-
     #describe{
-        width: 90%;
+        width: 45%;
         font-size: 16px;
     }
-
-    .group, .group2{
-        flex-direction: column;
-        height: 700px;
-        margin-top: 10px;
+    #display{
+        font-size: 17px;
     }
-
-    .tile, .tile2{
-        font-size: 14px;
-        justify-content: center;
+    .contactTile, .contactImg{
+        width: 85px;
+        height: 85px;
     }
-
-    #projects{
-        height: 1200px;
+    #footer{
+        width: 100%;
     }
-
-    .projectTile{
-        height: 300px;
-        width: 60%;
-        margin-top: 50px;
+    #icons{
+        width: 50%;
     }
+  } 
 
-    .btn{
-        margin-bottom: 10px;
+  @media only screen and (max-width: 1200px) {
+    #header, #footer{
+        width: 100%;
     }
-
-    img{
-        width: 80%;
-    }
-
-    .icons{
-        height: 200px;
-        width: 500px;
-        display: flex;
-        justify-content: space-around;
-        margin-left: 100px;
+    #describe{
+        width: 40%;
+        font-size: 15px;
     }
   }
   
+  @media only screen and (max-width: 1024px) {
+    #header, #footer{
+        width: 100%;
+    }
+    #header{
+        justify-content: space-around;
+    }
+    #prof, #avatar{
+        width: 150px;
+        height: 150px;
+        margin-left: 25px;
+    }
+    #nameAndProfession{
+        width: 20%;
+        margin-left: 50px;
+    }
+    #name{
+        font-size: 20px;
+    }
+    #profession{
+        font-size: 16px;
+        margin-top: 5px;
+    }
+    #clock{
+        font-size: 18px;
+    }
+    #describe{
+        width: 60%;
+        height: 155px;
+        font-size: 15px;
+    }
+    .langTile{
+        width: 40px;
+        height: 20px;
+        margin: 0 30px 200px 0;
+    }
+    #content{
+        height: 650px;
+        width: 100%;
+        align-items: center;
+        margin-top: 25px;
+    }
+    #info{
+        flex-direction: column;
+        height: 100%;
+        align-items: center;
+    }
+    nav{
+        width: 82%;
+        margin-left: 50px; 
+    }
+    .navTile{
+        width: 78%;
+        height: 90px;
+        font-size: 16px;
+    }
+    #display{
+        width: 73%;
+        margin: 0;
+        font-size: 17px;
+    }
+    #projects{
+        width: 70%;
+        margin: 0;
+        justify-content: space-around;
+    }
+    .projectTile, .projectImg{
+        width: 25%;
+        height: 100px;
+    }
+    .projectImg{
+        width: 100%;
+    }
+    .contactTile, .contactImg{
+        width: 75px;
+        height: 75px;
+    }
+    #icons{
+        width: 40%;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    #nameAndProfession{
+        margin-left: 40px;
+    }
+    #name{
+        font-size: 18px;
+    }
+    #profession{
+        font-size: 14px;
+        margin-top: 5px;
+    }
+    #clock{
+        font-size: 16px;
+    }
+    #describe{
+        height: 160px;
+        font-size: 12px;
+    }
+    form{
+        width: 40%;
+    }
+    
+    #fullName, #mail, 
+    textarea{
+        width: 75%;
+    }
+    #icons{
+        width: 45%;
+        justify-content: space-between;
+        margin-left: 50px;
+    }
+  }
+    
   @media only screen and (max-width: 600px) {
     html, body{
         overflow-x: hidden;
     }
-    
-    #container{
+    #header, #footer{
         width: 100%;
+    }
+    #header{
+        flex-direction: column;
+        height: 100%;
+    }
+    #prof, #avatar{
+        width: 105px;
+        height: 105px;
+        margin: 10px 0 0 0;
+    }
+    #nameAndProfession{
+        margin: 30px 0 0 0;
+        text-align: center;
+    }
+    #name{
+        font-size: 18px;
+        margin: 0;
+    }
+    #profession{
+        font-size: 14px;
+        margin: 5px 0 0 0;
+    }
+    #describe{
+        width: 70%;
+        margin: -20px 0 0 0;
+    }
+    #clock{
+        font-size: 16px;
+        margin: 15px 0 0 -10px;
+    }
+    .langTile{
+        width: 30px;
+        height: 15px;
+        margin: 10px 0 10px 525px;
     }
     #content{
-        width: 75%;
+        height: 500px;
+        width: 100%;
+        align-items: center;
+        margin-top: 75px;
     }
-
+    #info{
+        flex-direction: column;
+        height: 100%;
+        align-items: center;
+    }
     nav{
-        width: 100%;
-    }
-
-    #header{
-        height: 525px;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .prof{
-        width: 200px;
-        height: 200px;
-        margin: 25px 100px 0 0;
-    }
-
-    #name{
-        margin-top: 15px;
-        font-size: 18px;
-        display: flex;
-        justify-content: center;
-    }
-
-    #description{
-        font-size: 15px;
-        display: flex;
-        justify-content: center;
-    }
-
-    #describe{
-        font-size: 13px;
-        display: flex;
-        justify-content: center;
-        text-align: center;
-    }
-
-    #basicInfo{
         width: 80%;
-        margin: 0 0 0 -100px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
+        margin-left: 15px;
     }
-
-    .group, .group2{
-        flex-direction: column;
-        height: 700px;
-        margin-top: 10px;
-    }
-
-    .tile, .tile2{
-        font-size: 12px;
-        width: 60%;
-        text-align: center;
-    }
-
-    #projects{
-        height: 1400px;
-    }
-
-    .projectTile{
-        height: 300px;
-        width: 60%;
-    }
-
-    .btn{
+    .navTile{
+        width: 90%;
         font-size: 15px;
     }
-
-    p{
-        font-size: 16px;
+    #display{
+        width: 73%;
+        margin: 0;
+        font-size: 13px;
     }
-
-    form{
-        width: 50%;
-        height: 90%;
-        margin-left: 50px;
-    }
-
-    #fullName, #mail, textarea{
+    #projects{
         width: 75%;
+        margin-top: 25px;
     }
-
-    .icon{
-        height: 25px;
-        width: 25px;
+    .projectTile, .projectImg{
+        width: 21%;
+        height: 75px;
     }
-
-    .icons{
-        height: 200px;
-        width: 200px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        margin-left: 100px;
-    }
-
-    img{
-        height: 150px;
+    .projectImg{
         width: 100%;
     }
-
-    .skillBranch{
-        font-size: 16px;
+    #footer{
+        margin-top: 150px;
+        height: 200px;
+    }
+    form{
+        height: 225px;
+    }
+    input, textarea{
+        margin-top: 5px;
+    }
+    #lang{
+        height: 35px;
+    }
+    .contactTile, .contactImg{
+        width: 40px;
+        height: 40px;
     }
 
-    .skillTile1, .skillTile2{
+    .langTile, .langImg{
+        width: 40px;
+        height: 20px;
+    }
+    p{
+        font-size: 17px;
+    }
+    #send{
+        font-size: 13px;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    html, body{
+        overflow-x: hidden;
+    }
+    #header, #footer{
+        width: 100%;
+    }
+    #prof, #avatar{
+        width: 100px;
+        height: 100px;
+        margin: 10px 0 0 0;
+    }
+    #nameAndProfession{
+        margin: 40px 0 0 0;
+        text-align: center;
+        width: 20%;
+    }
+    #name{
+        font-size: 18px;
+        margin: 0;
+    }
+    #profession{
+        font-size: 14px;
+        margin: 5px 0 0 0;
+    }
+    #describe{
+        margin: 0;
+    }
+    #clock{
+        font-size: 16px;
+        margin: 15px 0 0 -20px;
+    }
+    .langTile{
+        width: 30px;
+        height: 15px;
+        margin: 10px 0 10px 425px;
+    }
+    #content{
+        height: 450px;
+        width: 100%;
+        align-items: center;
+        margin-top: 60px;
+    }
+    #info{
+        flex-direction: column;
+        height: 100%;
+        align-items: center;
+    }
+    nav{
+        width: 81%;
+        margin-left: 10px;
+    }
+    .navTile{
+        width: 90%;
+        font-size: 10px;
+    }
+    #display{
+        width: 73%;
+        margin: 0;
         font-size: 12px;
     }
+    #projects{
+        width: 75%;
+        margin-top: 25px;
+    }
+    .projectTile, .projectImg{
+        width: 22%;
+        height: 50px;
+    }
+    .projectImg{
+        width: 100%;
+    }
+    #footer{
+        flex-direction: column;
+        height: 275px;
+        margin-top: 120px;
+    }
+    form{
+        width: 60%;
+    }
+    .contactTile, .contactImg{
+        width: 40px;
+        height: 40px;
+    }
 
-    .treeIcon{
-        width: 15px;
+    .langTile, .langImg{
+        width: 40px;
+        height: 20px;
+    }
+    #icons{
+        margin: 25px 0 0 0;
+    }
+  }
+
+  @media only screen and (max-width: 425px) {
+    html, body{
+        overflow-x: hidden;
+    }
+    #header, #footer{
+        width: 100%;
+    }
+    #prof, #avatar{
+        width: 100px;
+        height: 100px;
+        margin: 10px 0 0 0;
+    }
+    #nameAndProfession{
+        margin: 40px 0 0 0;
+        text-align: center;
+        width: 20%;
+    }
+    #name{
+        font-size: 18px;
+        margin: 0;
+    }
+    #profession{
+        font-size: 14px;
+        margin: 5px 0 0 0;
+    }
+    #describe{
+        margin: 30px 0 0 0;
+        font-size: 11px;
+    }
+    #clock{
+        font-size: 16px;
+        margin: 15px 0 0 -30px;
+    }
+    .langTile{
+        width: 30px;
         height: 15px;
+        margin: 10px 0 10px 350px;
     }
-    #branch1{
-        top: 98px;
+  }
+
+  @media only screen and (max-width: 375px) {
+    .langTile{
+        margin: 10px 0 10px 300px;
     }
-    
-    #branch2{
-        top: 198px;
+  }
+
+  @media only screen and (max-width: 320px) {
+    .langTile{
+        margin: 10px 0 10px 250px;
     }
-    
-    #branch3{
-        top: 598px;
+    .navTile{
+        font-size: 9px;
     }
-    
-    #branch4{
-        top: 298px;
-    }
-    
-    #branch5{
-        top: 398px;
-    }
-    
-    #branch6{
-        top: 498px;
+    #profession{
+        font-size: 14px;
+        margin: 5px 0 0 7px;
     }
   }

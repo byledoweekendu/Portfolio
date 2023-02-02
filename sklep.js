@@ -116,7 +116,7 @@ const buttonMouses = document.querySelector("#mouses");
 const buttonKeyboards = document.querySelector("#keyboards");
 //
 
-//Funkcja startowa tworząca sotrage na koszyk:
+//Funkcja startowa tworząca storage na koszyk:
 function setStorageArray(){
     if(localStorage.getItem('basket') == null){
         localStorage.setItem('basket', '[]');
@@ -169,7 +169,7 @@ function drawPage(arr){
         const currentBasket = JSON.parse(localStorage.getItem('basket'));
         basketCounter.innerHTML = currentBasket.length;
         basketCount.innerHTML = currentBasket.length;
-    }, 150)
+    }, 250)
     add.addEventListener('click', () => {
         const currentBasket = JSON.parse(localStorage.getItem('basket'));
         const choosenProduct = item.id;
@@ -241,7 +241,6 @@ function drawBasket(){
     var frame = document.createElement("ul");
     frame.setAttribute("class", "basket");
     list.appendChild(frame);
-    setInterval(() => {
         const currentBasket = JSON.parse(localStorage.getItem('basket'));
         frame.innerHTML = '';
         basketCount.innerHTML = currentBasket.length;
@@ -258,14 +257,15 @@ function drawBasket(){
             frame.appendChild(element);
             element.appendChild(remove);
             remove.addEventListener('click', () => {
+                setTimeout(() => {
                 element.remove();
                 const currentBasket = JSON.parse(localStorage.getItem('basket'));
                 const clickedItem = item.id;
                 const updatedBasket = currentBasket.filter(item => item.id !== clickedItem);
                 localStorage.setItem('basket', JSON.stringify(updatedBasket));
+                }, 100)
               });
         })}
-    }, 500)
 }
 
 function drawPrice(){

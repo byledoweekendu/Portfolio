@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jacek Szymański Portfolio</title>
+    <meta name="description" content="My CV.">
+    <meta name="keywords" content="Jacek, Szymański, Portfolio">
+    <meta name="author" content="Jacek Szymański">
+
+    <link rel="stylesheet" href="portfolio.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.pack.js"></script>
+</head>
+<body>
+    <div id="header">
+        <div id="avatar"><img id="prof" src="img portfolio/prof.jpg" alt="Avatar"/></div>
+        <section id="nameAndProfession">
+            <span id="name">Jacek Szymański</span>
+            <span id="profession">Front-End Developer</span>
+            <span id="clock"></span>
+        </section>
+        <div id="describe">
+            Beginer front end developer fresh after course Java Script + React from scratch. 
+            </br>I currently works as a warehouseman. 
+            </br>I`m looking for my first job, internship or orders as a front-end developer. 
+            </br>Now I learn Git and SCSS yet.
+            </br>As an IT specialist, I handle sometimes with service and building computers and creating discord and gaming servers. 
+            </br>I`m open to intensive development and challenges to get as many experience as possible.
+        </div>
+        <a href= "index.html" class="langTile"><img src="img portfolio/pl.png" class="langImg" alt="Polish"/></a>
+    </div>
+    <div id="content">
+        <section id="info">
+            <nav>
+                <button id="skills" class="navTile">Skills</button>
+                <button id="school" class="navTile">Education</button>
+                <button id="exp" class="navTile">Experience</button>
+                <button id="abilities" class="navTile">Courses and training</button>
+                <button id="languages" class="navTile">Languages</button>
+                <button id="interested" class="navTile">Interests</button>
+            </nav>
+            <div id="display">
+                Hello, i`m Jacek. Welcome on my portfolio.
+                </br>I invite you to familiarize with my CV and projects bellow.
+                </br>First project contains the best recipes from my kitchen.
+                </br>Another one is from course. This is reminder.
+                </br>The last one presents internet shop model.
+            </div>
+        </section>
+        <div id="projects">
+            <a href="przepisy.html" target="_blank" class="projectTile"><img src="img portfolio/przepisy.jpg" class="projectImg" alt="Recipes"/></a>
+            <a href="reminder.html" target="_blank" class="projectTile"><img src="img portfolio/reminder.jpg" class="projectImg" alt="Reminder"/></a>
+            <a href="sklep.html" target="_blank" class="projectTile"><img src="img portfolio/sklep.jpg" class="projectImg" alt="Shop"/></a>
+        </div>
+    </div>
+    <div id="footer">
+        <form action="https://formsubmit.co/byledoweekendu1995@gmail.com" method="POST">
+            <p>Send me message</p>
+            <input id="fullName" name="name" type="text" placeholder="Write your name"/>
+            <input id="mail" name="mail" type="mail" placeholder="Write your email"/>
+            <textarea id="msg" name="msg" rows="3" placeholder="Write message"></textarea>
+            <input id="send" value="Send" type="submit"/>
+        </form>
+        <section id="icons">
+        <a href= "https://www.linkedin.com/in/jacek-szyma%C5%84ski-016a9125a" target="_blank" class="contactTile"><img src="img portfolio/linked.png" class="contactImg"  alt="LinkedIn"/></a>
+        <a href= "https://www.facebook.com/jacekszymanski95" target="_blank" class="contactTile"><img src="img portfolio/fb.png" class="contactImg" alt="Facebook"/></a>
+        <a href= "https://github.com/jacekszymanski95/Portfolio" target="_blank" class="contactTile"><img src="img portfolio/git.png" class="contactImg" alt="GIT"/></a>
+        </section>
+    </div>
+    <script src="portfolioEng.js"></script>
+</body>
+</html>

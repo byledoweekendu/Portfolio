@@ -11,107 +11,50 @@
 
     <link rel="stylesheet" href="portfolio.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.pack.js"></script>
 </head>
 <body>
     <div id="header">
-        <img src="img portfolio/prof.jpg" alt="Avatar" class="prof">
-        <div id="basicInfo">
+        <div id="avatar"><img id="prof" src="img portfolio/prof.jpg" alt="Avatar"/></div>
+        <section id="nameAndProfession">
             <span id="name">Jacek Szymański</span>
-            <span id="description">Front End Developer</span>
-            <span id="describe">
-                Cześć, jestem Jacek, początkujący front end developer świeżo po kursie Java Script + React od podstaw.
-                <br/>Obecnie pracuję jako magazynier. Poszukuję swojej pierwszej pracy, stażu lub zleceń jako frontendowiec.
-                <br/>Jako informatyk samouk zajmuję się od czasu do czasu serwisowaniem i budową komputerów oraz serwerami discord i gamingowymi.
-                <br/>Jestem otwarty na intensywny rozwój oraz nowe wyzwania, które dadzą mi jak największe możliwości rozwoju oraz doświadczenie. 
-            </span>
-        </div>     
+            <span id="profession">Front-End Developer</span>
+            <span id="clock"></span>
+        </section>
+        <div id="describe">
+            Początkujący front end developer świeżo po kursie Java Script + React od podstaw. 
+            </br>Obecnie pracuję jako magazynier. 
+            </br>Poszukuję swojej pierwszej pracy, stażu lub zleceń jako frontendowiec. 
+            </br>Na ten moment uczę się jeszcze Gita i SCSS`a.
+            </br>Jako informatyk samouk zajmuję się od czasu do czasu serwisowaniem i budową komputerów oraz serwerami discord i gamingowymi. 
+            </br>Jestem otwarty na intensywny rozwój oraz nowe wyzwania, które dadzą mi jak największe możliwości rozwoju oraz doświadczenie.
+        </div>
+        <a href= "portfolioEng.html" class="langTile"><img src="img portfolio/eng.png" class="langImg" alt="English"/></a>
     </div>
-    <div id="container">
-    <nav>
-        <a href="#header" class="btn">O mnie</a>
-        <a href="#skills" class="btn">Umiejętności</a>
-        <a href="#projects" class="btn">Projekty</a>
-        <a href="#footer" class="btn">Kontakt</a>
-    </nav>
     <div id="content">
-        <section class="group">
-            <div class="tile">
-                <p>Wykształcenie</p>
-                <b>wrzesień 2011 - kwiecień 2015:</b> ZSRiT Powodowo w zawodzie technik elektronik
-            </div>
-            <div class="tile">
-                <p>Doświadczenie zawodowe</p>
-                <b>sierpień 2022 - obecnie:</b> Inter Cars S.A. - Magazynier
-            </div>
-            <div class="tile">
-                <p>Kursy i Szkolenia</p>
-                <li><b>CODE:ME</b> Java Script + React</li>
-            </div>
-        </section>
-        <section class="group2">
-            <div class="tile">
-                <p>Języki obce</p>
-                <li>Język angielski - średniozaawansowany</li>
-            </div>
-            <div class="tile">
-                <p>Zainteresowania</p>
-                <li>Programowanie</li>
-                <li>Informatyka</li>
-                <li>Gry komputerowe</li>
-                <li>Gotowanie</li>
-                <li>Motoryzacja</li>
-            </div>
-            <div class="tile">
-                <p>Informacje dodatkowe</p>
-                <span>Poza frontendem chciałbym tworzyć też gry. </br> Poznaję Unreal Engine 5.</span>
+        <section id="info">
+            <nav>
+                <button id="skills" class="navTile">Umiejętności</button>
+                <button id="school" class="navTile">Wykształcenie</button>
+                <button id="exp" class="navTile">Doświadczenie zawodowe</button>
+                <button id="abilities" class="navTile">Kursy i szkolenia</button>
+                <button id="languages" class="navTile">Języki obce</button>
+                <button id="interested" class="navTile">Zainteresowania</button>
+            </nav>
+            <div id="display">
+                Cześć, jestem Jacek i witam serdecznie na moim portfolio.
+                </br>Zapraszam do zapoznania się z moim CV oraz z projektami poniżej.
+                </br>Pierwszy projekt przedstawia najlepsze przepisy z mojej kuchni.
+                </br>Kolejny to projekt z kursu. Jest to przypominacz.
+                </br>Ostatni przedstawia makietę sklepu internetowego.
             </div>
         </section>
-        <div id="skills">
-            <div id="treeL">
-                <span id="branch1" class="skillBranch">____</span>
-                <span id ="skill1" class="skillTile1"><img src="img portfolio/html.png" alt="HTML" class="treeIcon">Juniorski</span>
-                <span id="branch2" class="skillBranch">____</span>
-                <span id ="skill2" class="skillTile1"><img src="img portfolio/css.png" alt="CSS" class="treeIcon">Juniorski</span>
-                <span id="branch3" class="skillBranch">____</span>
-                <span id ="skill3" class="skillTile1"><img src="img portfolio/scss.png" alt="SCSS" class="treeIcon">Początkujący</span>
-            </div>
-            <div id="treeR">
-                <span id="branch4" class="skillBranch">____</span>
-                <span id ="skill4" class="skillTile2"><img src="img portfolio/js.png" alt="JS" class="treeIcon">Juniorski</span>
-                <span id="branch5" class="skillBranch">____</span>
-                <span id ="skill5" class="skillTile2"><img src="img portfolio/react.png" alt="React" class="treeIcon">Początkujący</span>
-                <span id="branch6" class="skillBranch">____</span>
-                <span id ="skill6" class="skillTile2"><img src="img portfolio/git.png" alt="GIT" class="treeIcon">Początkujący</span>
-            </div>
-        </div>
         <div id="projects">
-            <section class="group2">
-                <div class="projectTile">
-                    <a href = "przepisy.html" class="btn" target="_blank">Przepisy</a>
-                    <img src="img portfolio/przepisy.jpg" alt="Przepisy" >
-                    <div class="tile2">
-                        Pierwszy projekt przedstawiający najlepsze przepisy mojego autostwa.
-                    </div>
-                </div>
-                <div class="projectTile">
-                    <a href = "reminder.html" class="btn" target="_blank">Reminder</a>
-                    <img src="img portfolio/reminder.jpg" alt="Reminder" >
-                    <div class="tile2">
-                        Projekt z kursu. 
-                        <br/>Aplikacja mająca przypominać użytkownikowi o zaplanowanych zadaniach.   
-                    </div>
-                </div>
-                <div class="projectTile">
-                    <a href = "sklep.html" class="btn" target="_blank">Sklep</a>
-                    <img src="img portfolio/sklep.jpg" alt="Sklep" >
-                    <div class="tile2">
-                        Wersja demo sklepu internetowego. 
-                        <br/>Jest to makieta, bez możliwości logowania, rejestracji i kontaktu.
-                    </div>
-                </div>
-            </section>
+            <a href="przepisy.html" target="_blank" class="projectTile"><img src="img portfolio/przepisy.jpg" class="projectImg" alt="Przepisy"/></a>
+            <a href="reminder.html" target="_blank" class="projectTile"><img src="img portfolio/reminder.jpg" class="projectImg" alt="Przypominacz"/></a>
+            <a href="sklep.html" target="_blank" class="projectTile"><img src="img portfolio/sklep.jpg" class="projectImg" alt="Sklep"/></a>
         </div>
-    </div>
     </div>
     <div id="footer">
         <form action="https://formsubmit.co/byledoweekendu1995@gmail.com" method="POST">
@@ -121,11 +64,12 @@
             <textarea id="msg" name="msg" rows="3" placeholder="Wpisz wiadomość"></textarea>
             <input id="send" value="Wyślij" type="submit"/>
         </form>
-        <section class="icons">
-        <a href = https://www.linkedin.com/in/jacek-szyma%C5%84ski-016a9125a target="_blank"><img src="img portfolio/linked.png" alt="LinkedIn" class="icon"></a>
-        <a href = https://www.facebook.com/jacekszymanski95 target="_blank"><img src="img portfolio/fb.png" alt="Facebook" class="icon"></a>
-        <a href = https://github.com/jacekszymanski95/Portfolio target="_blank"><img src="img portfolio/git.png" alt="GIT" class="icon"></a>
+        <section id="icons">
+            <a href= "https://www.linkedin.com/in/jacek-szyma%C5%84ski-016a9125a" target="_blank" class="contactTile"><img src="img portfolio/linked.png" class="contactImg" alt="LinkedIn"/></a>
+            <a href= "https://www.facebook.com/jacekszymanski95" target="_blank" class="contactTile"><img src="img portfolio/fb.png" class="contactImg" alt="Facebook"/></a>
+            <a href= "https://github.com/jacekszymanski95/Portfolio" target="_blank" class="contactTile"><img src="img portfolio/git.png" class="contactImg" alt="GIT"/></a>
         </section>
     </div>
+    <script src="portfolio.js"></script>
 </body>
 </html>
