@@ -698,15 +698,18 @@ nav .sub-menu:hover .loginForm{
     #addToBasket{
         margin-right: 120px;
     }
+    p{
+        font-size: 13px;
+    }
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 400px) {
     nav{
-        left: 60px;
+        left: 20px;
     }
     .filterList{
         height: 55%;
-        left: 80px;
+        left: 110px;
     }
 
     .loginForm{
@@ -728,5 +731,12 @@ nav .sub-menu:hover .loginForm{
     }
     #addToBasket{
         margin-right: 100px;
+    }
+    #footer{
+        height: 325px;
+    }
+    p{
+        font-size: 11px;
+        margin-left: 0;
     }
 }
