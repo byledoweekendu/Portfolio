@@ -539,7 +539,7 @@ nav .sub-menu:hover .loginForm{
     }
   }
 
-  @media only screen and (max-width: 824px){
+  @media only screen and (max-width: 768px){
     p{
         margin-left: 0;
     }
@@ -549,6 +549,9 @@ nav .sub-menu:hover .loginForm{
     }
     #send{
         margin: 5px 0 5px 0;
+    }
+    .btn{
+        font-size: 17px;
     }
     .formButton{
         height: 30px;
@@ -669,13 +672,13 @@ nav .sub-menu:hover .loginForm{
     }
     .specialVisible{
         top: 520px;
-        left: 235px;
+        left: 215px;
     }
     .positionForBasketIcon{
         width: 230%;
     }
     .title, .price{
-        font-size: 12px;
+        font-size: 19px;
     }
 }
 
@@ -701,9 +704,12 @@ nav .sub-menu:hover .loginForm{
     p{
         font-size: 13px;
     }
+    .title, .price{
+        font-size: 16px;
+    }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 425px) {
     nav{
         left: 20px;
     }
@@ -738,5 +744,31 @@ nav .sub-menu:hover .loginForm{
     p{
         font-size: 11px;
         margin-left: 0;
+    }
+    .title, .price{
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .filterList{
+        height: 55%;
+        left: 100px;
+    }
+    .specialVisible{
+        left: 115px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    nav{
+        left: 20px;
+    }
+    .filterList{
+        height: 55%;
+        left: 75px;
+    }
+    .specialVisible{
+        left: 85px;
     }
 }
