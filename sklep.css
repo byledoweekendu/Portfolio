@@ -51,7 +51,7 @@ nav{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    margin: 100px 0 25px 0;
+    margin: 50px 0 25px 0;
 }
 
 .listBasket{
@@ -105,7 +105,7 @@ nav{
     position: relative;
 }
 
-.filterList, .filterListHidden{
+.filterList, .filterListMobile{
     width: 250px;
     height: 500px;
     margin-left: 30px;
@@ -120,7 +120,11 @@ nav{
 }
 
 .filterListHidden{
-    visibility: hidden;
+    display: none;
+}
+
+.filterListMobileHidden{
+    display: none;
 }
 
 .tile{
@@ -204,7 +208,7 @@ ol{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 75px 0 25px 0;
+    margin: 25px 0 25px 0;
     background-color: rgb(215, 215, 215);
 }
 
@@ -360,8 +364,6 @@ p{
     font-style: italic;
     font-weight: bolder;
     color: blue;
-    position: absolute;
-    top: 155px;
     display: none;
 }
 
@@ -579,6 +581,9 @@ nav .sub-menu:hover .loginForm{
     .container, .content{
         margin: 0 auto;
     }
+    .content{
+        height: 100%;
+    }
     .group, .group2, nav{
         display: flex;
         flex-direction: column;
@@ -586,35 +591,32 @@ nav .sub-menu:hover .loginForm{
         height: 55%;
     }
     nav{
-        position: absolute;
-        top: 33px;
-        left: 65px;
-        width: 30%;
+        margin-top: 15px;
+        width: 100%;
     }
     .group2{
         box-shadow: 0 0 0;
     }
-    .filterListHidden{
+    #filterList{
         display: none;
     }
-    .filterList{
-        height: 54%;
+    .filterListMobile{
         width: 90%;
         margin: 0;
-        align-items: center;
-        position: absolute;
-        top: 20px;
-        left: 150px;
         box-shadow: 0 0 0;
-        
+        display: flex;  
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
     }
     .searchBar{
         margin: 10px 0;
-        width: 80%;
-        height: 50px;
+        width: 30%;
+        height: 30px;
     }
     .formButton{
         height: 40px;
+        margin: 0;
         font-size: 15px;
     }
     .sum{
@@ -625,19 +627,21 @@ nav .sub-menu:hover .loginForm{
         font-size: 18px;
     }
     .loginForm{
-        top: 245px;
-        left: 20px;
+        top: 225px;
+        left: 23%;
     }
     .listNormal{
-        margin-top: 575px;
+        margin: 20px 0 25px 0;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 1fr);
     }
     .listBasket{
-        margin-top: 575px;
+        margin-bottom: 50px;
     }
     .basket{
+        height: 100%;
         width: 30%;
+        padding-bottom: 10px;
     }
     .frame{
         width: 28%;
@@ -650,15 +654,15 @@ nav .sub-menu:hover .loginForm{
         font-size: 14px;
     }
     #addToBasket{
-        margin-right: 140px;
+        margin-right: 32%;
     }
     #footer{
         flex-direction: column;
-        margin-top: 700px;
         padding: 10px;
     }
     .contact{
-        width: 65%;
+        width: 60%;
+        margin-right: 5%;
     }
     #mail, #msg{
         width: 75%;
@@ -668,7 +672,7 @@ nav .sub-menu:hover .loginForm{
     }
     p{
         font-size: 15px;
-        margin-left: 0;
+        margin-right: 5%;
     }
     .specialVisible{
         top: 520px;
@@ -678,97 +682,91 @@ nav .sub-menu:hover .loginForm{
         width: 230%;
     }
     .title, .price{
-        font-size: 19px;
+        font-size: 14px;
     }
 }
 
 @media only screen and (max-width: 500px) {
-    nav{
-        left: 70px;
-    }
-    .filterList{
-        height: 55%;
-        left: 120px;
-    }
-    .specialVisible{
-        left: 165px;
-    }
     .searchBar{
-        margin: 10px 0;
-        width: 90%;
-        height: 50px;
+        width: 35%;
     }
-    #addToBasket{
-        margin-right: 120px;
+    .loginForm{
+        left: 18%;
     }
     p{
         font-size: 13px;
     }
     .title, .price{
-        font-size: 16px;
+        font-size: 12px;
     }
 }
 
 @media only screen and (max-width: 425px) {
-    nav{
-        left: 20px;
-    }
-    .filterList{
-        height: 55%;
-        left: 110px;
-    }
-
     .loginForm{
-        left: 10px;
+        left: 12%;
     }
-    
-    .specialVisible{
-        left: 135px;
-    }
-
     .searchBar{
-        margin: 10px 0;
-        width: 115%;
-        height: 50px;
+        width: 40%;
     }
     ol{
         margin: 25px 0 0 10px;
         font-size: 13px;
     }
-    #addToBasket{
-        margin-right: 100px;
-    }
-    #footer{
-        height: 325px;
+    .contact{
+        height: 250px;
     }
     p{
         font-size: 11px;
         margin-left: 0;
     }
     .title, .price{
-        font-size: 14px;
+        font-size: 18px;
     }
 }
 
 @media only screen and (max-width: 375px) {
-    .filterList{
-        height: 55%;
-        left: 100px;
+    .loginForm{
+        left: 7%;
     }
-    .specialVisible{
-        left: 115px;
+    .searchBar{
+        width: 45%;
+    }
+    ol{
+        margin: 25px 0 0 20px;
+        font-size: 12px;
+    }
+    .title, .price{
+        font-size: 16px;
     }
 }
 
 @media only screen and (max-width: 320px) {
-    nav{
-        left: 20px;
+    .loginForm{
+        left: 0;
     }
-    .filterList{
-        height: 55%;
-        left: 75px;
+    .searchBar{
+        width: 55%;
     }
-    .specialVisible{
-        left: 85px;
+    ol{
+        margin: 25px 0 0 35px;
+        font-size: 11px;
+    }
+    .title, .price{
+        font-size: 14px;
+    }
+    .contact{
+        height: 225px;
+    }
+    .basket{
+        height: 100%;
+        width: 25%;
+        padding-bottom: 10px;
+    }
+    .frame{
+        width: 23%;
+    }
+    .clear, .buy{
+        font-size: 10px;
+        width: 20%;
     }
 }

@@ -14,7 +14,7 @@ class Product{
 }
 
 const specialOffer = [
-    new Product(Math.round(Math.random()*999999), "minatures/pc3.png", "Dell Vostro 3910 MT", 7999, 
+    new Product(Math.round(Math.random()*999999), "minatures/pc3.png", "Komputer Dell Vostro 3910 MT", 7999, 
     "Procesor: Intel Core i7-12700", "Ram: 16GB", "Dysk: 256GB SSD + 1TB HDD", "Grafika: GTX 1660", "System: Windows 10"),
     new Product(Math.round(Math.random()*999999), "minatures/monitor5.png", "Monitor Iiyama XCB3494WQSN-B1", 2299, 
     "Przekątna: 34 cale", "Rozdzielczość: 3440 x 1440", "Matryca: LED, VA", "Klasa energetyczna: G, G [HDR]", "Odświeżanie: 120Hz"), 
@@ -58,11 +58,11 @@ const headsets = [
     "Łączność: Przewodowe", "Budowa: Zamknięte", "Mikrofon: Posiada", "Redukcja Hałasu: Pasywna", "System audio: Stereo 2.0"),
     new Product(Math.round(Math.random()*999999), "minatures/headset2.png", "Słuchawki Logitech G733", 579, 
     "Łączność: Bezprzewodowe", "Budowa: Zamknięte", "Mikrofon: Posiada", "Redukcja Hałasu: Brak", "System audio: Stereo 2.0"),
-    new Product(Math.round(Math.random()*999999), "minatures/headset3.png", "Słuchawki SteelSeries Arctis Pro", 1548, 
+    new Product(Math.round(Math.random()*999999), "minatures/headset3.png", "Słuchawki SteelSeries Arctis", 1548, 
     "Łączność: Bezprzewodowe", "Budowa: Zamknięte", "Mikrofon: Posiada", "Redukcja Hałasu: Aktywna-ANC", "System audio: Surround 7.1"),
     new Product(Math.round(Math.random()*999999), "minatures/headset4.png", "Słuchawki Sharkoon Skiller SGH2", 109, 
     "Łączność: Przewodowe", "Budowa: Półotwarte", "Mikrofon: Posiada", "Redukcja Hałasu: Brak", "System audio: Stereo 2.0"),
-    new Product(Math.round(Math.random()*999999), "minatures/headset5.png", "Słuchawki SteelSeries Arctis 7+", 749, 
+    new Product(Math.round(Math.random()*999999), "minatures/headset5.png", "Słuchawki SteelSeries Arctis", 749, 
     "Łączność: Bezprzewodowe", "Budowa: Zamknięte", "Mikrofon: Posiada", "Redukcja Hałasu: Brak", "System audio: Surround 7.1"),
     new Product(Math.round(Math.random()*999999), "minatures/headset6.png", "Słuchawki Corsair Virtuoso", 1199, 
     "Łączność: Bezprzewodowe", "Budowa: Zamknięte", "Mikrofon: Posiada", "Redukcja Hałasu: Aktywna", "System audio: Surround 7.1")
@@ -98,11 +98,13 @@ const keyboards = [
 
 const allProducts = pc.concat(monitors, headsets, mouses, keyboards);
 let defaultArray = specialOffer;
+var currentList = '';
 //
 
 //Uchwyty:
 const list = document.querySelector("#list");
 const filterList = document.querySelector("#filterList");
+const filterListMobile = document.querySelector("#filterListMobile");
 const searchBar = document.querySelector(".searchBar");
 const h1 = document.querySelector("h1");
 const basketCount = document.querySelector("#basketCounter");
@@ -128,8 +130,16 @@ setStorageArray();
 
 //Obsługa nav i rysowanie podstron:
 function drawPage(arr){
-    list.setAttribute("class", "listNormal")
-    filterList.setAttribute("class", "filterList");
+    list.setAttribute("class", "listNormal");
+    if(window.innerWidth > 600){
+        currentList = filterList;
+        filterList.setAttribute("class", "filterList");
+        filterListMobile.setAttribute("class", "filterListMobileHidden");
+    }else{
+        currentList = filterListMobile;
+        filterListMobile.setAttribute("class", "filterListMobile");
+        filterList.setAttribute("class", "filterListHidden");
+    }
     return arr.forEach((item) => {
     const tile = document.createElement("div");
     const img = document.createElement("img");
@@ -200,6 +210,7 @@ function callStartPage(){
     h1.setAttribute("class", "specialVisible");
     drawPage(specialOffer);
     filterList.setAttribute("class", "filterListHidden");
+    filterListMobile.setAttribute("class", "filterListMobileHidden");
 }
 
 callStartPage(); 
@@ -208,6 +219,7 @@ buttonMain.addEventListener('click', () =>{
     callDrawPage(specialOffer);
     h1.setAttribute("class", "specialVisible");
     filterList.setAttribute("class", "filterListHidden");
+    filterListMobile.setAttribute("class", "filterListMobileHidden");
 })
 
 buttonPC.addEventListener('click', () =>{
@@ -296,6 +308,7 @@ function drawPrice(){
         callDrawPage(defaultArray);
         if(defaultArray === specialOffer){
             filterList.setAttribute("class", "filterListHidden");
+            filterListMobile.setAttribute("class", "filterListMobileHidden");
         }
     })
 }
@@ -325,6 +338,7 @@ function searchProduct(arr, phrase){
   }else{
     drawPage(searched);
     filterList.setAttribute("class", "filterListHidden");
+    filterListMobile.setAttribute("class", "filterListMobileHidden");
   }
 }
 
@@ -348,7 +362,7 @@ searchBar.addEventListener('keyup', () => {
 
 //Filtry pc:
 function handlePcFilters(arr){
-    filterList.innerHTML = '';
+    currentList.innerHTML = '';
     const budget = document.createElement("span");   
     var price = document.createElement("input");
     const processor = document.createElement("span");
@@ -398,29 +412,29 @@ function handlePcFilters(arr){
     labels.forEach((item) => {
         item.setAttribute("style", "width: 75px");  
     })
-    filterList.appendChild(budget);
-    filterList.appendChild(price);
-    filterList.appendChild(processor);
-    filterList.appendChild(labelIntel);
+    currentList.appendChild(budget);
+    currentList.appendChild(price);
+    currentList.appendChild(processor);
+    currentList.appendChild(labelIntel);
     labelIntel.appendChild(intel);
-    filterList.appendChild(labelAmd);
+    currentList.appendChild(labelAmd);
     labelAmd.appendChild(amd);
-    filterList.appendChild(ram);
-    filterList.appendChild(label8);
+    currentList.appendChild(ram);
+    currentList.appendChild(label8);
     label8.appendChild(capacity8);
-    filterList.appendChild(label16);
+    currentList.appendChild(label16);
     label16.appendChild(capacity16);
-    filterList.appendChild(label32);
+    currentList.appendChild(label32);
     label32.appendChild(capacity32);
-    filterList.appendChild(disc);
-    filterList.appendChild(labelSsd);
+    currentList.appendChild(disc);
+    currentList.appendChild(labelSsd);
     labelSsd.appendChild(ssd);
-    filterList.appendChild(labelHdd);
+    currentList.appendChild(labelHdd);
     labelHdd.appendChild(hdd);
-    filterList.appendChild(graphic);
-    filterList.appendChild(labelGtx);
+    currentList.appendChild(graphic);
+    currentList.appendChild(labelGtx);
     labelGtx.appendChild(gtx);
-    filterList.appendChild(labelRtx);
+    currentList.appendChild(labelRtx);
     labelRtx.appendChild(rtx);
     var results = [];
     price.addEventListener("keyup", () =>{
@@ -575,7 +589,7 @@ function handlePcFilters(arr){
 }
 //Monitory:
 function handleMonitorsFilters(arr){
-    filterList.innerHTML = '';
+    currentList.innerHTML = '';
     const budget = document.createElement("span");   
     var price = document.createElement("input");
     const diagonal = document.createElement("span");
@@ -623,28 +637,28 @@ function handleMonitorsFilters(arr){
     labels.forEach((item) => {
         item.setAttribute("style", "width: 125px");  
     })
-    filterList.appendChild(budget);
-    filterList.appendChild(price);
-    filterList.appendChild(diagonal);
-    filterList.appendChild(label23);
+    currentList.appendChild(budget);
+    currentList.appendChild(price);
+    currentList.appendChild(diagonal);
+    currentList.appendChild(label23);
     label23.appendChild(inch23);
-    filterList.appendChild(label27);
+    currentList.appendChild(label27);
     label27.appendChild(inch27);
-    filterList.appendChild(label34);
+    currentList.appendChild(label27);
     label34.appendChild(inch34);
-    filterList.appendChild(resolution);
-    filterList.appendChild(label1920);
+    currentList.appendChild(resolution);
+    currentList.appendChild(label1920);
     label1920.appendChild(res1920);
-    filterList.appendChild(label2560);
+    currentList.appendChild(label2560);
     label2560.appendChild(res2560);
-    filterList.appendChild(label3440);
+    currentList.appendChild(label3440);
     label3440.appendChild(res3440);
-    filterList.appendChild(refresh);
-    filterList.appendChild(label60);
+    currentList.appendChild(refresh);
+    currentList.appendChild(label60);
     label60.appendChild(ref60);
-    filterList.appendChild(label60To144);
+    currentList.appendChild(label60To144);
     label60To144.appendChild(ref60To144);
-    filterList.appendChild(labelOver144);
+    currentList.appendChild(labelOver144);
     labelOver144.appendChild(refOver144);
     var results = [];
     price.addEventListener("keyup", () =>{
@@ -799,7 +813,7 @@ function handleMonitorsFilters(arr){
 }
 //Słuchawki:
 function handleHeadsetsFilters(arr){
-    filterList.innerHTML = '';
+    currentList.innerHTML = '';
     const budget = document.createElement("span");   
     var price = document.createElement("input");
     const communication = document.createElement("span");
@@ -838,22 +852,22 @@ function handleHeadsetsFilters(arr){
     labels.forEach((item) => {
         item.setAttribute("style", "width: 130px");  
     })
-    filterList.appendChild(budget);
-    filterList.appendChild(price);
-    filterList.appendChild(communication);
-    filterList.appendChild(labelWired);
+    currentList.appendChild(budget);
+    currentList.appendChild(price);
+    currentList.appendChild(communication);
+    currentList.appendChild(labelWired);
     labelWired.appendChild(wired);
-    filterList.appendChild(labelWireless);
+    currentList.appendChild(labelWireless);
     labelWireless.appendChild(wireless);
-    filterList.appendChild(noiceReduction);
-    filterList.appendChild(labelPassive);
+    currentList.appendChild(noiceReduction);
+    currentList.appendChild(labelPassive);
     labelPassive.appendChild(passive);
-    filterList.appendChild(labelActive);
+    currentList.appendChild(labelActive);
     labelActive.appendChild(active);
-    filterList.appendChild(audioSystem);
-    filterList.appendChild(labelStereo);
+    currentList.appendChild(audioSystem);
+    currentList.appendChild(labelStereo);
     labelStereo.appendChild(stereo);
-    filterList.appendChild(labelSurround);
+    currentList.appendChild(labelSurround);
     labelSurround.appendChild(surround);
     var results = [];
     price.addEventListener("keyup", () =>{
@@ -966,7 +980,7 @@ function handleHeadsetsFilters(arr){
 }
 //Myszy:
 function handleMousesFilters(arr){
-    filterList.innerHTML = '';
+    currentList.innerHTML = '';
     const budget = document.createElement("span");   
     var price = document.createElement("input");
     const communication = document.createElement("span");
@@ -1008,24 +1022,24 @@ function handleMousesFilters(arr){
     labels.forEach((item) => {
         item.setAttribute("style", "width: 130px");  
     })
-    filterList.appendChild(budget);
-    filterList.appendChild(price);
-    filterList.appendChild(communication);
-    filterList.appendChild(labelWired);
+    currentList.appendChild(budget);
+    currentList.appendChild(price);
+    currentList.appendChild(communication);
+    currentList.appendChild(labelWired);
     labelWired.appendChild(wired);
-    filterList.appendChild(labelWireless);
+    currentList.appendChild(labelWireless);
     labelWireless.appendChild(wireless);
-    filterList.appendChild(type);
-    filterList.appendChild(labelClassic);
+    currentList.appendChild(type);
+    currentList.appendChild(labelClassic);
     labelClassic.appendChild(classic);
-    filterList.appendChild(labelGamers);
+    currentList.appendChild(labelGamers);
     labelGamers.appendChild(gamers);
-    filterList.appendChild(dpi);
-    filterList.appendChild(label1000);
+    currentList.appendChild(dpi);
+    currentList.appendChild(label1000);
     label1000.appendChild(dpi1000);
-    filterList.appendChild(label3200);
+    currentList.appendChild(label3200);
     label3200.appendChild(dpi3200);
-    filterList.appendChild(labelOver3200);
+    currentList.appendChild(labelOver3200);
     labelOver3200.appendChild(dpiOver3200);
     var results = [];
     price.addEventListener("keyup", () =>{
@@ -1152,7 +1166,7 @@ function handleMousesFilters(arr){
 }
 //Klawiatury:
 function handleKeyboardsFilters(arr){
-    filterList.innerHTML = '';
+    currentList.innerHTML = '';
     const budget = document.createElement("span");   
     var price = document.createElement("input");
     const communication = document.createElement("span");
@@ -1191,22 +1205,22 @@ function handleKeyboardsFilters(arr){
     labels.forEach((item) => {
         item.setAttribute("style", "width: 130px");  
     })
-    filterList.appendChild(budget);
-    filterList.appendChild(price);
-    filterList.appendChild(communication);
-    filterList.appendChild(labelWired);
+    currentList.appendChild(budget);
+    currentList.appendChild(price);
+    currentList.appendChild(communication);
+    currentList.appendChild(labelWired);
     labelWired.appendChild(wired);
-    filterList.appendChild(labelWireless);
+    currentList.appendChild(labelWireless);
     labelWireless.appendChild(wireless);
-    filterList.appendChild(type);
-    filterList.appendChild(labelClassic);
+    currentList.appendChild(type);
+    currentList.appendChild(labelClassic);
     labelClassic.appendChild(classic);
-    filterList.appendChild(labelGamers);
+    currentList.appendChild(labelGamers);
     labelGamers.appendChild(gamers);
-    filterList.appendChild(switches);
-    filterList.appendChild(labelMechanical);
+    currentList.appendChild(switches);
+    currentList.appendChild(labelMechanical);
     labelMechanical.appendChild(mechanical);
-    filterList.appendChild(labelMembrane);
+    currentList.appendChild(labelMembrane);
     labelMembrane.appendChild(membrane);
     var results = [];
     price.addEventListener("keyup", () =>{
