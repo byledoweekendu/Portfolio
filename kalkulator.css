@@ -1,0 +1,139 @@
+::-webkit-scrollbar {
+    width: 15px;
+}
+  
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px silver;
+    border-radius: 10px;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: rgb(35, 35, 35);
+    border-radius: 10px;
+}
+
+body{
+    background-color: rgb(25, 25, 25);
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+#content{
+    height: 125vh;
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+#nextTo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 75%;
+    height: 5vh;
+}
+
+#inputs{
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#list{
+    display: block;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100%;
+    width: 100%;
+    color: goldenrod;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.counters{
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.counter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 17.5%;
+    height: 200px;
+    background-color: rgb(40, 40, 40);
+    border-radius: 10px;
+    border: none;
+    box-shadow: gray 0px 0px 9px;
+}
+
+input{
+    width: 10%;
+    height: 30px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+    border: none;
+    outline: none;
+    box-shadow: silver 0px 0px 9px;
+}
+
+h1{
+    color: gold;
+}
+
+h2{
+    color: orangered;
+}
+
+span{
+    font-size: 24px;
+    font-weight: bold;
+    color: aliceblue;
+}
+
+ol{
+    width: 80%;
+    text-align: center;
+}
+
+.reset{
+    width: 10%;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    background-color: red;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+.reset:hover{
+    color: silver;
+    background-color: rgb(255, 39, 39);
+    transition: 300ms color;
+}
+
+#sure{
+    position: absolute;
+    width: 7.5%;
+    height: 35px;
+    top: 180px;
+    right: 515px;
+}

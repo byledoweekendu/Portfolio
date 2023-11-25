@@ -1,3 +1,17 @@
+//Arrays:
+const responsive = `<a href="przepisy.html" target="_blank" class="projectTile"><img src="img portfolio/przepisy.jpg" class="projectImg" alt="Recipes"/></a>
+<a href="reminder.html" target="_blank" class="projectTile"><img src="img portfolio/reminder.jpg" class="projectImg" alt="Reminder"/></a>
+<a href="sklep.html" target="_blank" class="projectTile"><img src="img portfolio/sklep.jpg" class="projectImg" alt="Shop"/></a>`;
+const notResponsive = `<a href="kalkulator.html" target="_blank" class="projectTile"><img src="img portfolio/kalkulator.jpg" class="projectImg" alt="Calculator"/></a>
+<a href="quiz.html" target="_blank" class="projectTile"><img src="img portfolio/quiz.jpg" class="projectImg" alt="Quiz"/></a>
+<a href="gra.html" target="_blank" class="projectTile"><img src="img portfolio/gra.jpg" class="projectImg" alt="Game"/></a>`;
+const all = `<a href="przepisy.html" target="_blank" class="projectTile"><img src="img portfolio/przepisy.jpg" class="projectImg" alt="Recipes"/></a>
+<a href="reminder.html" target="_blank" class="projectTile"><img src="img portfolio/reminder.jpg" class="projectImg" alt="Reminder"/></a>
+<a href="sklep.html" target="_blank" class="projectTile"><img src="img portfolio/sklep.jpg" class="projectImg" alt="Shop"/></a>
+<a href="kalkulator.html" target="_blank" class="projectTile"><img src="img portfolio/kalkulator.jpg" class="projectImg" alt="Calculator"/></a>
+<a href="quiz.html" target="_blank" class="projectTile"><img src="img portfolio/quiz.jpg" class="projectImg" alt="Quiz"/></a>
+<a href="gra.html" target="_blank" class="projectTile"><img src="img portfolio/gra.jpg" class="projectImg" alt="Game"/></a>`;
+
 //Nav:
 $("#skills").click(function(){
 	$("#display").fadeOut(750);
@@ -44,6 +58,27 @@ $("#interested").click(function(){
 	$("#display").fadeIn(750);
 	setTimeout(() => {
 		$("#display").html("<li>Programming</li> <li>Informatics</li> <li>Computer games</li> <li>Cooking</li> <li>Automotive</li>");
+	}, 750)
+});
+$("#responsive").click(function(){
+	$("#projects").fadeOut(750);
+	$("#projects").fadeIn(750);
+	setTimeout(() => {
+		$("#projects").html(responsive);
+	}, 750)
+});
+$("#not-responsive").click(function(){
+	$("#projects").fadeOut(750);
+	$("#projects").fadeIn(750);
+	setTimeout(() => {
+		$("#projects").html(notResponsive);
+	}, 750)
+});
+$("#all").click(function(){
+	$("#projects").fadeOut(750);
+	$("#projects").fadeIn(750);
+	setTimeout(() => {
+		$("#projects").html(all);
 	}, 750)
 });
 //

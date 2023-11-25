@@ -1,5 +1,15 @@
 ::-webkit-scrollbar {
-    display: none;
+    width: 15px;
+}
+  
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px silver;
+    border-radius: 10px;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: rgb(35, 35, 35);
+    border-radius: 10px;
 }
 
 html{
@@ -10,6 +20,14 @@ body{
     background-color: rgb(50, 50, 50);
     margin: 0;
     border: 0;
+}
+
+#nextTo{
+    width: 75%;
+    height: 5vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 #header{
@@ -88,7 +106,7 @@ body{
 
 #content{
     width: 1200px;
-    height: 500px;
+    height: 600px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -178,15 +196,17 @@ img{
 #projects{
     width: 1130px;
     height: 200px;
-    margin-top: -30px;
+    margin-bottom: 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    overflow-x: scroll;
 }
 
 .projectTile{
     width: 300px;
     height: 150px;
+    margin-right: 10%;
 }
 
 #footer{
@@ -240,6 +260,19 @@ textarea{
     background: rgb(33, 240, 33);
 }
 
+#responsive, #not-responsive, #all{
+    height: 35px;
+    width: 30%;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: italic;
+    background-color: brown;
+    color: white;
+}
+
 .contactTile, .contactImg{
     width: 90px;
     height: 90px;
@@ -268,6 +301,12 @@ p{
     margin-top: -7px;
     color: rgb(225, 225, 225);
     transition: margin-top 300ms;
+}
+
+#responsive:hover, #not-responsive:hover, #all:hover{
+    color: silver;
+    background-color: rgb(209, 43, 43);
+    transition: color 300ms;
 }
 
 #skills:hover{
@@ -321,6 +360,9 @@ p{
     #icons{
         width: 50%;
     }
+    .projectTile{
+        margin-right: 6%;
+    }
   } 
 
   @media only screen and (max-width: 1200px) {
@@ -370,7 +412,7 @@ p{
         margin: 0 30px 200px 0;
     }
     #content{
-        height: 650px;
+        height: 100%;
         width: 100%;
         align-items: center;
         margin-top: 25px;
@@ -395,13 +437,26 @@ p{
         font-size: 17px;
     }
     #projects{
-        width: 70%;
-        margin: 0;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
         justify-content: space-around;
+        align-items: center;
+        overflow: hidden;
+        margin-top: 50px;
+    }
+    #nextTo{
+        flex-direction: column;
+        margin-top: 50px;
+        height: 15vh;
+    }
+    #responsive, #not-responsive, #all{
+        width: 40%;
     }
     .projectTile, .projectImg{
-        width: 25%;
+        width: 20%;
         height: 100px;
+        margin: 0 0 25px 0;
     }
     .projectImg{
         width: 100%;
@@ -412,6 +467,11 @@ p{
     }
     #icons{
         width: 40%;
+    }
+    .projectTile:hover{
+        margin-top: 0;
+        margin-left: 5%;
+        transition: margin-left 300ms;
     }
   }
 
@@ -445,6 +505,9 @@ p{
         width: 45%;
         justify-content: space-between;
         margin-left: 50px;
+    }
+    #responsive, #not-responsive, #all{
+        width: 60%;
     }
   }
     
@@ -489,12 +552,6 @@ p{
         height: 15px;
         margin: 10px 0 20px 82%;
     }
-    #content{
-        height: 500px;
-        width: 100%;
-        align-items: center;
-        margin-top: 75px;
-    }
     #info{
         flex-direction: column;
         height: 100%;
@@ -513,10 +570,6 @@ p{
         margin: 0;
         font-size: 13px;
     }
-    #projects{
-        width: 75%;
-        margin-top: 25px;
-    }
     .projectTile, .projectImg{
         width: 21%;
         height: 75px;
@@ -525,7 +578,7 @@ p{
         width: 100%;
     }
     #footer{
-        margin-top: 150px;
+        margin-top: 50px;
         height: 200px;
     }
     form{
@@ -546,6 +599,10 @@ p{
     }
     #send{
         font-size: 13px;
+    }
+    #responsive, #not-responsive, #all{
+        width: 75%;
+        font-size: 15px;
     }
   }
 
@@ -586,12 +643,6 @@ p{
         height: 15px;
         margin: 10px 0 20px 80%;
     }
-    #content{
-        height: 450px;
-        width: 100%;
-        align-items: center;
-        margin-top: 60px;
-    }
     #info{
         flex-direction: column;
         height: 100%;
@@ -610,10 +661,6 @@ p{
         margin: 0;
         font-size: 12px;
     }
-    #projects{
-        width: 75%;
-        margin-top: 25px;
-    }
     .projectTile, .projectImg{
         width: 22%;
         height: 50px;
@@ -624,7 +671,7 @@ p{
     #footer{
         flex-direction: column;
         height: 275px;
-        margin-top: 120px;
+        margin-top: 50px;
     }
     form{
         width: 60%;

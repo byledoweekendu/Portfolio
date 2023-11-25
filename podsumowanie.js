@@ -41,10 +41,6 @@ function drawBasketList(){
 
 drawBasketList();
 
-buy.addEventListener('click', () => {
-    localStorage.setItem('basket', "[]");
-})
-
 let delivery = 0;
 
 parcelLocker.addEventListener('change', function() {
