@@ -448,7 +448,7 @@ p{
     #nextTo{
         flex-direction: column;
         margin-top: 50px;
-        height: 15vh;
+        height: 20vh;
     }
     #responsive, #not-responsive, #all{
         width: 40%;
@@ -539,10 +539,6 @@ p{
         font-size: 14px;
         margin: 5px 0 0 0;
     }
-    #describe{
-        width: 70%;
-        margin: 1% 0 0 0;
-    }
     #clock{
         font-size: 16px;
         margin: 15px 0 0 -10px;
@@ -631,9 +627,6 @@ p{
         font-size: 14px;
         margin: 5px 0 0 0;
     }
-    #describe{
-        margin: 8% 0 0 0;
-    }
     #clock{
         font-size: 16px;
         margin: 15px 0 0 -20px;
@@ -690,9 +683,6 @@ p{
         font-size: 16px;
         margin: 15px 0 0 -25px;
     }
-    #describe{
-        margin: 12% 0 0 0;
-    }
   }
 
   @media only screen and (max-width: 425px) {
@@ -720,10 +710,6 @@ p{
         font-size: 14px;
         margin: 5px 0 0 0;
     }
-    #describe{
-        margin: 7% 0 0 0;
-        font-size: 11px;
-    }
     #clock{
         font-size: 16px;
         margin: 15px 0 0 -30px;
@@ -742,6 +728,9 @@ p{
   }
 
   @media only screen and (max-width: 320px) {
+    #describe{
+        margin-top: 25px;
+    }
     .langTile{
         margin: 10px 0 20px 70%;
     }
