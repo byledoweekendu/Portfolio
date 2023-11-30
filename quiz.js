@@ -233,7 +233,6 @@ function load(arr, count){
             answer4.innerHTML = item.answer4;
             $(".answer").click(function(e){
                 let height = history.scrollHeight;
-                console.log(height);
                 history.scrollTo(0, height);
                 let element = e.target.innerHTML;
                 if(element == item.correct){
