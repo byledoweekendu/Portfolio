@@ -127,6 +127,9 @@ nav{
 
 .sub-menu{
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .list{
@@ -418,11 +421,11 @@ nav .sub-menu:hover .list{
     }
 
     .btn-list{
-        width: 50%;
+        width: 90%;
     }
 
     .list, .sub-menu{
-        width: 80%;
+        width: 100%;
     }
   }
 
