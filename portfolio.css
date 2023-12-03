@@ -85,7 +85,7 @@ body{
 }
 
 #profession{
-    color: gold;
+    color: goldenrod;
     font-size: 22px;
     font-weight: bold;  
 }
@@ -106,7 +106,7 @@ body{
 
 #content{
     width: 1200px;
-    height: 600px;
+    height: 700px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -194,9 +194,9 @@ img{
 }
 
 #projects{
-    width: 1130px;
-    height: 200px;
-    margin-bottom: 25px;
+    width: 100%;
+    height: 300px;
+    margin: -25px 0 25px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -206,7 +206,7 @@ img{
 .projectTile{
     width: 300px;
     height: 150px;
-    margin-right: 10%;
+    margin: 0 10% 0 1%;
 }
 
 #footer{
@@ -296,17 +296,33 @@ p{
     font-weight: bold;
 }
 
-.navTile:hover, .projectTile:hover, .contactTile:hover, .langImg:hover{
+.projectName{
+    font-size: 18px;
+    font-weight: bold;
+    color: gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.projectImg:hover, .navTile:hover, .projectTile:hover, .contactTile:hover, .langImg:hover{
     box-shadow: silver 0px 0px 10px;
     margin-top: -7px;
     color: rgb(225, 225, 225);
     transition: margin-top 300ms;
 }
 
+.projectTile:hover{
+    box-shadow: none;
+}
+
 #responsive:hover, #not-responsive:hover, #all:hover{
     color: silver;
     background-color: rgb(209, 43, 43);
-    transition: color 300ms;
+    margin-top: -7px;
+    transition: margin-top 300ms;
 }
 
 #skills:hover{
@@ -438,7 +454,7 @@ p{
     }
     #projects{
         width: 100%;
-        height: 100%;
+        height: 125vh;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
@@ -452,6 +468,11 @@ p{
     }
     #responsive, #not-responsive, #all{
         width: 40%;
+    }
+    #responsive:hover, #not-responsive:hover, #all:hover{
+        margin-top: 0;
+        margin-right: 5%;
+        transition: margin-right 300ms;
     }
     .projectTile, .projectImg{
         width: 20%;
@@ -472,6 +493,10 @@ p{
         margin-top: 0;
         margin-left: 5%;
         transition: margin-left 300ms;
+    }
+    .projectName{
+        font-size: 15px;
+        text-align: center;
     }
   }
 
@@ -597,8 +622,11 @@ p{
         font-size: 13px;
     }
     #responsive, #not-responsive, #all{
-        width: 75%;
+        width: 60%;
         font-size: 15px;
+    }
+    #projects{
+        height: 100vh;
     }
   }
 
