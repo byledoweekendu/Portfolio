@@ -501,6 +501,12 @@ p{
   }
 
   @media only screen and (max-width: 768px) {
+    #nextTo{
+        height: 200px;
+    }
+    #projects{
+        height: 350vh;
+    }
     #nameAndProfession{
         margin-left: 40px;
     }
@@ -510,6 +516,9 @@ p{
     #profession{
         font-size: 14px;
         margin-top: 5px;
+    }
+    #describe{
+        margin-left: 5%;
     }
     #clock{
         font-size: 16px;
