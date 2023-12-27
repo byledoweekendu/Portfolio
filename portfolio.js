@@ -1,22 +1,3 @@
-//Tablice:
-const responsive = `<a href="przepisy.html" target="_blank" class="projectTile"><span class="projectName">Przepisy</span><img src="img portfolio/przepisy.jpg" class="projectImg" alt="Przepisy"/></a>
-<a href="reminder.html" target="_blank" class="projectTile"><span class="projectName">Przypominacz</span><img src="img portfolio/reminder.jpg" class="projectImg" alt="Przypominacz"/></a>
-<a href="sklep.html" target="_blank" class="projectTile"><span class="projectName">Sklep</span><img src="img portfolio/sklep.jpg" class="projectImg" alt="Sklep"/></a>
-<a href="portfolioalfa.html" target="_blank" class="projectTile"><span class="projectName">Alfa Portfolio</span><img src="img portfolio/alfa.jpg" class="projectImg" alt="Alfa Portfolio"/></a>
-<a href="portfoliobeta.html" target="_blank" class="projectTile"><span class="projectName">Beta Portfolio</span><img src="img portfolio/beta.jpg" class="projectImg" alt="Beta Portfolio"/></a>`;
-const notResponsive = `<a href="kalkulator.html" target="_blank" class="projectTile"><span class="projectName">Kalkulator wydatków</span><img src="img portfolio/kalkulator.jpg" class="projectImg" alt="Kalkulator"/></a>
-<a href="quiz.html" target="_blank" class="projectTile"><span class="projectName">Quiz tabliczka mnożenia</span><img src="img portfolio/quiz.jpg" class="projectImg" alt="Quiz"/></a>
-<a href="gra.html" target="_blank" class="projectTile"><span class="projectName">Gra w zgadywanie</span><img src="img portfolio/gra.jpg" class="projectImg" alt="Gra"/></a>`;
-const all = `<a href="przepisy.html" target="_blank" class="projectTile"><span class="projectName">Przepisy</span><img src="img portfolio/przepisy.jpg" class="projectImg" alt="Przepisy"/></a>
-<a href="reminder.html" target="_blank" class="projectTile"><span class="projectName">Przypominacz</span><img src="img portfolio/reminder.jpg" class="projectImg" alt="Przypominacz"/></a>
-<a href="sklep.html" target="_blank" class="projectTile"><span class="projectName">Sklep</span><img src="img portfolio/sklep.jpg" class="projectImg" alt="Sklep"/></a>
-<a href="portfolioalfa.html" target="_blank" class="projectTile"><span class="projectName">Alfa Portfolio</span><img src="img portfolio/alfa.jpg" class="projectImg" alt="Alfa Portfolio"/></a>
-<a href="portfoliobeta.html" target="_blank" class="projectTile"><span class="projectName">Beta Portfolio</span><img src="img portfolio/beta.jpg" class="projectImg" alt="Beta Portfolio"/></a>
-<a href="kalkulator.html" target="_blank" class="projectTile"><span class="projectName">Kalkulator wydatków</span><img src="img portfolio/kalkulator.jpg" class="projectImg" alt="Kalkulator"/></a>
-<a href="quiz.html" target="_blank" class="projectTile"><span class="projectName">Quiz tabliczka mnożenia</span><img src="img portfolio/quiz.jpg" class="projectImg" alt="Quiz"/></a>
-<a href="gra.html" target="_blank" class="projectTile"><span class="projectName">Gra w zgadywanie</span><img src="img portfolio/gra.jpg" class="projectImg" alt="Gra"/></a>`;
-//
-
 //Nav:
 $("#home").click(function(){
 	$("#display").fadeOut(750);
