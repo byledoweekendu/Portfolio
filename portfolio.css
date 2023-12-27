@@ -52,7 +52,7 @@ nav{
 
 #display{
     width: 60%;
-    height: 650px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -417,7 +417,7 @@ a:hover{
         width: 75%;
     }
     #footer{
-        margin: 0 auto 25px auto;
+        margin: 50px auto 25px auto;
     }
     #description{
         margin: 0 auto;
@@ -427,6 +427,9 @@ a:hover{
     .projectTile, .projectImg{
         width: 97.5%;
         height: 150px;
+    }
+    #display{
+        margin-top: 50px;
     }
   }
 
@@ -505,6 +508,9 @@ a:hover{
     textarea{
     width: 75%;
     }
+    .text{
+        margin-top: 0;
+    }
   }
 
   @media only screen and (max-width: 425px) {
@@ -524,9 +530,6 @@ a:hover{
         height: 300px;
         width: 135%;
         margin-left: -17.5%;
-    }
-    #footer{
-        margin-top: -40px;
     }
     .projects{
         width: 140%;
