@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jacek Szymański Portfolio</title>
+    <meta name="description" content="Moje wirtualne CV.">
+    <meta name="keywords" content="Jacek, Szymański, Portfolio">
+    <meta name="author" content="Jacek Szymański">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    <link rel="stylesheet" href="portfoliobeta.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.pack.js"></script>
+</head>
+<body>
+    <div id="header">
+        <div id="avatar"><img id="prof" src="img portfolio beta/prof.jpg" alt="Avatar"/></div>
+        <section id="nameAndProfession">
+            <span id="name">Jacek Szymański</span>
+            <span id="profession">Front-End Developer</span>
+            <span id="clock"></span>
+        </section>
+        <div id="describe">
+            Początkujący front end developer po kursie Java Script + React od podstaw. 
+            </br>Jestem otwarty na intensywny rozwój oraz nowe wyzwania, które dadzą mi jak największe możliwości rozwoju oraz doświadczenie.
+            </br>Poszukuję zleceń, stażu lub swojej pierwszej pracy jako frontendowiec. 
+            </br>Zapraszam do współpracy, stworzę stronę firmy, portfolio lub pomogę przy projektach. 
+        </div>
+        <a href= "portfolioEng.html" class="langTile"><img src="img portfolio beta/eng.png" class="langImg" alt="English"/></a>
+    </div>
+    <div id="content">
+        <section id="info">
+            <nav>
+                <button id="skills" class="navTile">Umiejętności</button>
+                <button id="school" class="navTile">Wykształcenie</button>
+                <button id="exp" class="navTile">Doświadczenie zawodowe</button>
+                <button id="abilities" class="navTile">Kursy i szkolenia</button>
+                <button id="languages" class="navTile">Języki obce</button>
+                <button id="interested" class="navTile">Zainteresowania</button>
+            </nav>
+            <div id="display">
+                Cześć, jestem Jacek i witam serdecznie na moim portfolio.
+                </br>Zapraszam do zapoznania się z moim CV oraz projektami poniżej.
+                </br>Projekty podzieliłem na responsywne i nieresponsywne.
+                </br>Responsywne to te, które dostosowane są do wyświetlania na komputerze i urządzeniach mobilnych.
+                </br>Nieresponsywne to projekty tylko na komputer.
+                </br>Projekty tworzę w zależności od potrzeb. 
+            </div>
+        </section>
+        <div id="nextTo">
+            <button id="all">Wszystkie</button>
+            <button id="responsive">Responsywne</button>
+            <button id="not-responsive">Nieresponsywne</button>
+        </div>
+        <div id="projects">
+            <a href="przepisy.html" target="_blank" class="projectTile"><span class="projectName">Przepisy</span><img src="img portfolio beta/przepisy.jpg" class="projectImg" alt="Przepisy"/></a>
+            <a href="reminder.html" target="_blank" class="projectTile"><span class="projectName">Przypominacz</span><img src="img portfolio beta/reminder.jpg" class="projectImg" alt="Przypominacz"/></a>
+            <a href="sklep.html" target="_blank" class="projectTile"><span class="projectName">Sklep</span><img src="img portfolio beta/sklep.jpg" class="projectImg" alt="Sklep"/></a>
+            <a href="kalkulator.html" target="_blank" class="projectTile"><span class="projectName">Kalkulator wydatków</span><img src="img portfolio beta/kalkulator.jpg" class="projectImg" alt="Kalkulator"/></a>
+            <a href="quiz.html" target="_blank" class="projectTile"><span class="projectName">Quiz tabliczka mnożenia</span><img src="img portfolio beta/quiz.jpg" class="projectImg" alt="Quiz"/></a>
+            <a href="gra.html" target="_blank" class="projectTile"><span class="projectName">Gra w zgadywanie</span><img src="img portfolio beta/gra.jpg" class="projectImg" alt="Gra"/></a>
+        </div>
+    </div>
+    <div id="footer">
+        <form action="https://formsubmit.co/byledoweekendu1995@gmail.com" method="POST">
+            <input type="hidden" name="_next" value="https://jacekszymanskiportfolio.cba.pl/index.html">
+            <p>Wyślij mi wiadomość</p>
+            <input id="fullName" name="name" type="text" placeholder="Wpisz swoje imię"/>
+            <input id="mail" name="mail" type="mail" placeholder="Wpisz swój email"/>
+            <textarea id="msg" name="msg" rows="3" placeholder="Wpisz wiadomość"></textarea>
+            <input id="send" value="Wyślij" type="submit"/>
+        </form>
+        <section id="icons">
+            <a href= "https://www.linkedin.com/in/jacek-szyma%C5%84ski-016a9125a" target="_blank" class="contactTile"><img src="img portfolio beta/linked.png" class="contactImg" alt="LinkedIn"/></a>
+            <a href= "https://www.facebook.com/jacekszymanski95" target="_blank" class="contactTile"><img src="img portfolio beta/fb.png" class="contactImg" alt="Facebook"/></a>
+            <a href= "https://github.com/jacekszymanski95/Portfolio" target="_blank" class="contactTile"><img src="img portfolio beta/git.png" class="contactImg" alt="GIT"/></a>
+        </section>
+    </div>
+    <script src="portfoliobeta.js"></script>
+</body>
+</html>

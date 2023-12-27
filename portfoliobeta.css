@@ -1,0 +1,781 @@
+::-webkit-scrollbar {
+    width: 15px;
+}
+  
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px silver;
+    border-radius: 10px;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: rgb(35, 35, 35);
+    border-radius: 10px;
+}
+
+html{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+body{
+    background-color: rgb(50, 50, 50);
+    margin: 0;
+    border: 0;
+}
+
+#nextTo{
+    width: 75%;
+    height: 5vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#header{
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    background-color: rgb(25, 25, 25);
+}
+
+#prof{
+    width: 200px;
+    height: 200px;
+    border-radius: 150px;
+    box-shadow: silver 0px 0px 10px;
+}
+
+#nameAndProfession{
+    width: 300px;
+    height: 75px;
+    margin-left: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#describe{
+    width: 590px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+}
+
+.langTile{
+    width: 50px;
+    height: 25px;
+    margin: 0 0 200px 25px;
+}
+
+.langImg{
+    border-radius: 0;
+}
+
+#name{
+    color: orangered;
+    font-size: 30px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+#profession{
+    color: goldenrod;
+    font-size: 22px;
+    font-weight: bold;  
+}
+
+#clock{
+    width: 400px;
+    height: 200px;
+    margin-top: 90px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    font-size: 27px;
+    font-weight: bold;
+    font-style: italic;
+    color: greenyellow;
+    text-align: center;
+}
+
+#content{
+    width: 1200px;
+    height: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#info{
+    width: 1150px;
+    height: 300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav{
+    width: 500px;
+    height: 260px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+a, button{
+    text-decoration: none;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}
+
+img{
+    border-radius: 10px;
+}
+
+.navTile{
+    width: 145px;
+    height: 110px;
+    padding: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    font-family: 'Roboto Condensed', sans-serif;
+    cursor: pointer;
+    color: white;
+}
+
+#skills{
+    background-color: red;
+}
+
+#school{
+    background-color: green;
+}
+
+#exp{
+    background-color: purple;
+}
+
+#abilities{
+    background-color: orchid;
+}
+
+#interested{
+    background-color: cornflowerblue ;
+}
+
+#languages{
+    background-color: blueviolet ;
+}
+
+#display{
+    width: 590px;
+    height: 220px;
+    padding: 10px;
+    margin-top: -20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    box-shadow: silver 0px 0px 10px;
+    border-radius: 10px;
+}
+
+#projects{
+    width: 100%;
+    height: 300px;
+    margin: -25px 0 25px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow-x: scroll;
+}
+
+.projectTile{
+    width: 300px;
+    height: 150px;
+    margin: 0 10% 0 1%;
+}
+
+#footer{
+    width: 100%;
+    height: 300px;
+    margin: 50px auto 25px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(35, 35, 35);
+}
+
+form{
+    height: 300px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: -75px;
+    box-shadow: gray 0px 0px 12px;
+    border-radius: 15px;
+    background-color: rgb(30, 30, 30);
+}
+
+#fullName, #mail, 
+textarea{
+    height: 25px;
+    width: 300px;
+    border-radius: 5px;
+    border: 2px solid rgb(179, 179, 179);
+    outline: none;
+    font-size: 14px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+textarea{
+    height: 100px;
+}
+
+#send{
+    height: 25px;
+    width: 75px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: rgb(17, 205, 17) solid 2px;
+    outline: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    background: rgb(33, 240, 33);
+}
+
+#responsive, #not-responsive, #all{
+    height: 35px;
+    width: 30%;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: italic;
+    background-color: brown;
+    color: white;
+}
+
+.contactTile, .contactImg{
+    width: 90px;
+    height: 90px;
+}
+
+#icons{
+    width: 800px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 100px;
+}
+
+b{
+    color: goldenrod;
+}
+
+p{
+    color: beige;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.projectName{
+    font-size: 18px;
+    font-weight: bold;
+    color: gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.projectImg:hover, .navTile:hover, .projectTile:hover, .contactTile:hover, .langImg:hover{
+    box-shadow: silver 0px 0px 10px;
+    margin-top: -7px;
+    color: rgb(225, 225, 225);
+    transition: margin-top 300ms;
+}
+
+.projectTile:hover{
+    box-shadow: none;
+}
+
+#responsive:hover, #not-responsive:hover, #all:hover{
+    color: silver;
+    background-color: rgb(209, 43, 43);
+    margin-top: -7px;
+    transition: margin-top 300ms;
+}
+
+#skills:hover{
+    background-color: rgb(255, 67, 67);
+}
+
+#school:hover{
+    background-color: rgb(1, 184, 1);
+}
+
+#exp:hover{
+    background-color: rgb(180, 34, 180);
+}
+
+#abilities:hover{
+    background-color: rgb(255, 138, 251);
+}
+
+#interested:hover{
+    background-color: rgb(134, 176, 255) ;
+}
+
+#languages:hover{
+    background-color: rgb(169, 77, 255) ;
+}
+
+#send:hover{
+    background-color: rgb(82, 255, 47);
+    color: white;
+    transition: color 300ms;
+}
+
+  @media only screen and (max-width: 1366px) {
+    #info, nav, #display, #projects{
+        width: 85%;
+    }
+    #describe{
+        width: 45%;
+        font-size: 16px;
+    }
+    #display{
+        font-size: 17px;
+    }
+    .contactTile, .contactImg{
+        width: 85px;
+        height: 85px;
+    }
+    #footer{
+        width: 100%;
+    }
+    #icons{
+        width: 50%;
+    }
+    .projectTile{
+        margin-right: 6%;
+    }
+  } 
+
+  @media only screen and (max-width: 1200px) {
+    #header, #footer{
+        width: 100%;
+    }
+    #describe{
+        width: 40%;
+        font-size: 15px;
+    }
+  }
+  
+  @media only screen and (max-width: 1024px) {
+    #header, #footer{
+        width: 100%;
+    }
+    #header{
+        justify-content: space-around;
+    }
+    #prof, #avatar{
+        width: 150px;
+        height: 150px;
+        margin-left: 25px;
+    }
+    #nameAndProfession{
+        width: 20%;
+        margin-left: 50px;
+    }
+    #name{
+        font-size: 20px;
+    }
+    #profession{
+        font-size: 16px;
+        margin-top: 5px;
+    }
+    #clock{
+        font-size: 18px;
+    }
+    #describe{
+        width: 60%;
+        height: 155px;
+        font-size: 15px;
+    }
+    .langTile{
+        width: 40px;
+        height: 20px;
+        margin: 0 30px 200px 0;
+    }
+    #content{
+        height: 100%;
+        width: 100%;
+        align-items: center;
+        margin-top: 25px;
+    }
+    #info{
+        flex-direction: column;
+        height: 100%;
+        align-items: center;
+    }
+    nav{
+        width: 82%;
+        margin-left: 50px; 
+    }
+    .navTile{
+        width: 78%;
+        height: 90px;
+        font-size: 16px;
+    }
+    #display{
+        width: 73%;
+        margin: 0;
+        font-size: 17px;
+    }
+    #projects{
+        width: 100%;
+        height: 125vh;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        overflow: hidden;
+        margin-top: 50px;
+    }
+    #nextTo{
+        flex-direction: column;
+        margin-top: 50px;
+        height: 20vh;
+    }
+    #responsive, #not-responsive, #all{
+        width: 40%;
+    }
+    #responsive:hover, #not-responsive:hover, #all:hover{
+        margin-top: 0;
+        margin-right: 5%;
+        transition: margin-right 300ms;
+    }
+    .projectTile, .projectImg{
+        width: 20%;
+        height: 100px;
+        margin: 0 0 25px 0;
+    }
+    .projectImg{
+        width: 100%;
+    }
+    .contactTile, .contactImg{
+        width: 75px;
+        height: 75px;
+    }
+    #icons{
+        width: 40%;
+    }
+    .projectTile:hover{
+        margin-top: 0;
+        margin-left: 5%;
+        transition: margin-left 300ms;
+    }
+    .projectName{
+        font-size: 15px;
+        text-align: center;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    #nextTo{
+        height: 200px;
+    }
+    #projects{
+        height: 350vh;
+    }
+    #nameAndProfession{
+        margin-left: 40px;
+    }
+    #name{
+        font-size: 18px;
+    }
+    #profession{
+        font-size: 14px;
+        margin-top: 5px;
+    }
+    #describe{
+        margin-left: 5%;
+    }
+    #clock{
+        font-size: 16px;
+    }
+    #describe{
+        height: 160px;
+        font-size: 12px;
+    }
+    form{
+        width: 40%;
+    }
+    
+    #fullName, #mail, 
+    textarea{
+        width: 75%;
+    }
+    #icons{
+        width: 45%;
+        justify-content: space-between;
+        margin-left: 50px;
+    }
+    #responsive, #not-responsive, #all{
+        width: 60%;
+    }
+  }
+    
+  @media only screen and (max-width: 600px) {
+    html, body{
+        overflow-x: hidden;
+    }
+    #header, #footer{
+        width: 100%;
+    }
+    #header{
+        flex-direction: column;
+        height: 100%;
+    }
+    #prof, #avatar{
+        width: 105px;
+        height: 105px;
+        margin: 10px 0 0 0;
+    }
+    #nameAndProfession{
+        margin: 30px 0 0 0;
+        text-align: center;
+    }
+    #name{
+        font-size: 18px;
+        margin: 0;
+    }
+    #profession{
+        font-size: 14px;
+        margin: 5px 0 0 0;
+    }
+    #clock{
+        font-size: 16px;
+        margin: 15px 0 0 -10px;
+    }
+    .langTile, .langImg{
+        width: 30px;
+        height: 15px;
+        margin: 10px 0 20px 82%;
+    }
+    #info{
+        flex-direction: column;
+        height: 100%;
+        align-items: center;
+    }
+    nav{
+        width: 80%;
+        margin-left: 15px;
+    }
+    .navTile{
+        width: 90%;
+        font-size: 15px;
+    }
+    #display{
+        width: 73%;
+        margin: 0;
+        font-size: 13px;
+    }
+    .projectTile, .projectImg{
+        width: 21%;
+        height: 75px;
+    }
+    .projectImg{
+        width: 100%;
+    }
+    #footer{
+        margin-top: 50px;
+        height: 200px;
+    }
+    form{
+        height: 225px;
+    }
+    input, textarea{
+        margin-top: 5px;
+    }
+    #lang{
+        height: 35px;
+    }
+    .contactTile, .contactImg{
+        width: 40px;
+        height: 40px;
+    }
+    p{
+        font-size: 17px;
+    }
+    #send{
+        font-size: 13px;
+    }
+    #responsive, #not-responsive, #all{
+        width: 60%;
+        font-size: 15px;
+    }
+    #projects{
+        height: 100vh;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    html, body{
+        overflow-x: hidden;
+    }
+    #header, #footer{
+        width: 100%;
+    }
+    #prof, #avatar{
+        width: 100px;
+        height: 100px;
+        margin: 10px 0 0 0;
+    }
+    #nameAndProfession{
+        margin: 40px 0 0 0;
+        text-align: center;
+        width: 20%;
+    }
+    #name{
+        font-size: 18px;
+        margin: 0;
+    }
+    #profession{
+        font-size: 14px;
+        margin: 5px 0 0 0;
+    }
+    #clock{
+        font-size: 16px;
+        margin: 15px 0 0 -20px;
+    }
+    .langTile, .langImg{
+        width: 30px;
+        height: 15px;
+        margin: 10px 0 20px 80%;
+    }
+    #info{
+        flex-direction: column;
+        height: 100%;
+        align-items: center;
+    }
+    nav{
+        width: 81%;
+        margin-left: 10px;
+    }
+    .navTile{
+        width: 90%;
+        font-size: 10px;
+    }
+    #display{
+        width: 73%;
+        margin: 0;
+        font-size: 12px;
+    }
+    .projectTile, .projectImg{
+        width: 22%;
+        height: 50px;
+    }
+    .projectImg{
+        width: 100%;
+    }
+    #footer{
+        flex-direction: column;
+        height: 275px;
+        margin-top: 50px;
+    }
+    form{
+        width: 60%;
+    }
+    .contactTile, .contactImg{
+        width: 40px;
+        height: 40px;
+    }
+    #icons{
+        margin: 25px 0 0 0;
+    }
+  }
+
+  @media only screen and (max-width: 450px) {
+    #clock{
+        font-size: 16px;
+        margin: 15px 0 0 -25px;
+    }
+  }
+
+  @media only screen and (max-width: 425px) {
+    html, body{
+        overflow-x: hidden;
+    }
+    #header, #footer{
+        width: 100%;
+    }
+    #prof, #avatar{
+        width: 100px;
+        height: 100px;
+        margin: 10px 0 0 0;
+    }
+    #nameAndProfession{
+        margin: 40px 0 0 0;
+        text-align: center;
+        width: 20%;
+    }
+    #name{
+        font-size: 18px;
+        margin: 0;
+    }
+    #profession{
+        font-size: 14px;
+        margin: 5px 0 0 0;
+    }
+    #clock{
+        font-size: 16px;
+        margin: 15px 0 0 -30px;
+    }
+    .langTile{
+        width: 30px;
+        height: 15px;
+        margin: 10px 0 20px 75%;
+    }
+  }
+
+  @media only screen and (max-width: 375px) {
+    .langTile{
+        margin: 10px 0 20px 73%;
+    }
+  }
+
+  @media only screen and (max-width: 320px) {
+    #describe{
+        margin-top: 25px;
+    }
+    .langTile{
+        margin: 10px 0 20px 70%;
+    }
+    .navTile{
+        font-size: 9px;
+    }
+    #profession{
+        font-size: 14px;
+        margin: 5px 0 0 7px;
+    }
+  }

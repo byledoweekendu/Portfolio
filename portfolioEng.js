@@ -1,16 +1,16 @@
 //Arrays:
-const responsive = `<a href="przepisy.html" target="_blank" class="projectTile"><span class="projectName">Recipes</span><img src="img portfolio/przepisy.jpg" class="projectImg" alt="Recipes"/></a>
-<a href="reminder.html" target="_blank" class="projectTile"><span class="projectName">Reminder</span><img src="img portfolio/reminder.jpg" class="projectImg" alt="Reminder"/></a>
-<a href="sklep.html" target="_blank" class="projectTile"><span class="projectName">Shop</span><img src="img portfolio/sklep.jpg" class="projectImg" alt="Shop"/></a>`;
-const notResponsive = `<a href="kalkulator.html" target="_blank" class="projectTile"><span class="projectName">Calculator</span><img src="img portfolio/kalkulator.jpg" class="projectImg" alt="Calculator"/></a>
-<a href="quiz.html" target="_blank" class="projectTile"><span class="projectName">Quiz</span><img src="img portfolio/quiz.jpg" class="projectImg" alt="Quiz"/></a>
-<a href="gra.html" target="_blank" class="projectTile"><span class="projectName">Game</span><img src="img portfolio/gra.jpg" class="projectImg" alt="Game"/></a>`;
-const all = `<a href="przepisy.html" target="_blank" class="projectTile"><span class="projectName">Recipes</span><img src="img portfolio/przepisy.jpg" class="projectImg" alt="Recipes"/></a>
-<a href="reminder.html" target="_blank" class="projectTile"><span class="projectName">Reminder</span><img src="img portfolio/reminder.jpg" class="projectImg" alt="Reminder"/></a>
-<a href="sklep.html" target="_blank" class="projectTile"><span class="projectName">Shop</span><img src="img portfolio/sklep.jpg" class="projectImg" alt="Shop"/></a>
-<a href="kalkulator.html" target="_blank" class="projectTile"><span class="projectName">Calculator</span><img src="img portfolio/kalkulator.jpg" class="projectImg" alt="Calculator"/></a>
-<a href="quiz.html" target="_blank" class="projectTile"><span class="projectName">Quiz</span><img src="img portfolio/quiz.jpg" class="projectImg" alt="Quiz"/></a>
-<a href="gra.html" target="_blank" class="projectTile"><span class="projectName">Game</span><img src="img portfolio/gra.jpg" class="projectImg" alt="Game"/></a>`;
+const responsive = `<a href="przepisy.html" target="_blank" class="projectTile"><span class="projectName">Recipes</span><img src="img portfolio beta/przepisy.jpg" class="projectImg" alt="Recipes"/></a>
+<a href="reminder.html" target="_blank" class="projectTile"><span class="projectName">Reminder</span><img src="img portfolio beta/reminder.jpg" class="projectImg" alt="Reminder"/></a>
+<a href="sklep.html" target="_blank" class="projectTile"><span class="projectName">Shop</span><img src="img portfolio beta/sklep.jpg" class="projectImg" alt="Shop"/></a>`;
+const notResponsive = `<a href="kalkulator.html" target="_blank" class="projectTile"><span class="projectName">Calculator</span><img src="img portfolio beta/kalkulator.jpg" class="projectImg" alt="Calculator"/></a>
+<a href="quiz.html" target="_blank" class="projectTile"><span class="projectName">Quiz</span><img src="img portfolio beta/quiz.jpg" class="projectImg" alt="Quiz"/></a>
+<a href="gra.html" target="_blank" class="projectTile"><span class="projectName">Game</span><img src="img portfolio beta/gra.jpg" class="projectImg" alt="Game"/></a>`;
+const all = `<a href="przepisy.html" target="_blank" class="projectTile"><span class="projectName">Recipes</span><img src="img portfolio beta/przepisy.jpg" class="projectImg" alt="Recipes"/></a>
+<a href="reminder.html" target="_blank" class="projectTile"><span class="projectName">Reminder</span><img src="img portfolio beta/reminder.jpg" class="projectImg" alt="Reminder"/></a>
+<a href="sklep.html" target="_blank" class="projectTile"><span class="projectName">Shop</span><img src="img portfolio beta/sklep.jpg" class="projectImg" alt="Shop"/></a>
+<a href="kalkulator.html" target="_blank" class="projectTile"><span class="projectName">Calculator</span><img src="img portfolio beta/kalkulator.jpg" class="projectImg" alt="Calculator"/></a>
+<a href="quiz.html" target="_blank" class="projectTile"><span class="projectName">Quiz</span><img src="img portfolio beta/quiz.jpg" class="projectImg" alt="Quiz"/></a>
+<a href="gra.html" target="_blank" class="projectTile"><span class="projectName">Game</span><img src="img portfolio beta/gra.jpg" class="projectImg" alt="Game"/></a>`;
 
 //Nav:
 $("#skills").click(function(){
