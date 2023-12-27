@@ -376,6 +376,9 @@ a:hover{
     #container{
         height: 100%;
     }
+    #display, #nextTo1{
+        width: 75%;
+    }
     nav{
         justify-content: space-around;
         position: sticky;
