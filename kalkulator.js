@@ -93,7 +93,7 @@ const addFood = () =>{
   let list = JSON.parse(localStorage.getItem('list'));
   let amount = foodInput.value;
   let sum = food + parseFloat(amount);
-  let string = "Jedzenie + " + amount + "zł";
+  let string = "Spożywcze + " + amount + "zł";
   list.push(string);
   localStorage.setItem('food', JSON.stringify(parseFloat(sum)));
   localStorage.setItem('list', JSON.stringify(list));
