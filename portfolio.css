@@ -318,8 +318,9 @@ a:visited{
     color: red;
 }
 
-.btn:hover{
-    font-size: 1.25rem;
+a:hover{
+    font-size: 1.15rem;
+    color: orangered;
     cursor: pointer;
     transition: 400ms font-size;
 }
@@ -423,7 +424,7 @@ a:visited{
         margin: 0;
         align-items: center;
     }
-    .btn:hover{
+    a:hover{
         font-size: 1.1rem;
     }
     #nextTo1{
@@ -474,7 +475,7 @@ a:visited{
         font-size: 0.9rem;
         width: 17.5%;
     }
-    .btn:hover{
+    a:hover{
         font-size: 1rem;
     }
     #hi, #profession{
@@ -523,12 +524,11 @@ a:visited{
   }
     
   @media only screen and (max-width: 600px) {
-    .btn{
+    a{
         font-size: 0.75rem;
-        width: 20%;
     }
-    .btn:hover{
-        font-size: 0.85rem;
+    .btn{
+        width: 20%;
     }
     #hi, #profession{
         font-size: 1.25rem;
@@ -631,9 +631,6 @@ a:visited{
     .btn{
         font-size: 0.6rem;
     }
-    .btn:hover{
-        font-size: 0.7rem;
-    }
     #profession{
         font-size: 0.8rem;
     }
@@ -647,12 +644,6 @@ a:visited{
   }
 
   @media only screen and (max-width: 320px) {
-    .btn{
-        font-size: 0.5rem;
-    }
-    .btn:hover{
-        font-size: 0.55rem;
-    }
     form{
         height: 300px;
         width: 150%;
