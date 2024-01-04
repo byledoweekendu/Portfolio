@@ -298,31 +298,36 @@ p{
     align-items: flex-end;
     background-color: rgb(40,40,40);
     color: red;
-    font-size: 1.1rem;
+    outline: none;
+    text-decoration: none;
+    font-size: 1rem;
     font-weight: bold;
     font-family: 'Exo', sans-serif;
 }
 
-a, button{
-    outline: none;
+.btnM{
     text-decoration: none;
-}
-
-a{
     color: red;
-    font-size: 1rem;
     font-weight: bold;
 }
 
-a:visited{
+.btn:visited{
     color: red;
 }
 
-a:hover{
+.btnM:visited{
+    color: red;
+}
+
+.btn:hover{
     font-size: 1.15rem;
     color: orangered;
     cursor: pointer;
     transition: 400ms font-size;
+}
+
+.btnM:hover{
+    font-size: 1rem;
 }
 
 .projectImg:hover, .projectTile:hover, .contactTile:hover{
@@ -471,13 +476,6 @@ a:hover{
   }
 
   @media only screen and (max-width: 768px) {
-    .btn{
-        font-size: 0.9rem;
-        width: 17.5%;
-    }
-    a:hover{
-        font-size: 1rem;
-    }
     #hi, #profession{
         font-size: 1.5rem;
     }
@@ -524,11 +522,11 @@ a:hover{
   }
     
   @media only screen and (max-width: 600px) {
-    a{
+    .btnM{
         font-size: 0.75rem;
     }
-    .btn{
-        width: 20%;
+    .btnM:hover{
+        font-size: 0.75rem;
     }
     #hi, #profession{
         font-size: 1.25rem;
@@ -628,7 +626,10 @@ a:hover{
   }
 
   @media only screen and (max-width: 375px) {
-    .btn{
+    .btnM{
+        font-size: 0.6rem;
+    }
+    .btnM:hover{
         font-size: 0.6rem;
     }
     #profession{
