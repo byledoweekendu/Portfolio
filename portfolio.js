@@ -38,9 +38,9 @@ const projects = `<span class="text2">Responsywne:</span>
 const contact = `<form action="https://formsubmit.co/byledoweekendu1995@gmail.com" method="POST">
 <input type="hidden" name="_next" value="https://jacekszymanskiportfolio.cba.pl/index.html">
 <p>Wyślij mi wiadomość</p>
-<input id="fullName" name="name" type="text" placeholder="Wpisz swoje imię"/>
-<input id="mail" name="mail" type="mail" placeholder="Wpisz swój email"/>
-<textarea id="msg" name="msg" rows="3" placeholder="Wpisz wiadomość"></textarea>
+<input id="fullName" name="name" type="text" placeholder="Wpisz swoje imię" required/>
+<input id="mail" name="mail" type="mail" placeholder="Wpisz swój email" required/>
+<textarea id="msg" name="msg" rows="3" placeholder="Wpisz wiadomość" required></textarea>
 <input id="send" value="Wyślij" type="submit"/>
 </form>
 <p id="refund">Skontaktuj się ze mną przez powyższy formularz lub social media poniżej.</p>`;
