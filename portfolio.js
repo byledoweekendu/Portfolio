@@ -60,6 +60,7 @@ $("#homeM").click(function(){
 	$("#display").fadeIn(750);
 	setTimeout(() => {
 		$("#display").html(home);
+		window.scrollTo(0, document.body.scrollHeight);
 	}, 750)
 });
 
@@ -76,6 +77,7 @@ $("#aboutM").click(function(){
 	$("#display").fadeIn(750);
 	setTimeout(() => {
 		$("#display").html(about);
+		window.scrollTo(0, document.body.scrollHeight);
 	}, 750)
 });
 
@@ -93,6 +95,7 @@ $("#skillsM").click(function(){
 	$("#display").fadeIn(750);
 	setTimeout(() => {
 		$("#display").html(skills);
+		window.scrollTo(0, document.body.scrollHeight);
 		animateM();
 	}, 750)
 });
@@ -110,6 +113,7 @@ $("#projectsBtnM").click(function(){
 	$("#display").fadeIn(750);
 	setTimeout(() => {
 		$("#display").html(projects);
+		window.scrollTo(0, document.body.scrollHeight -850);
 	}, 750)
 });
 
@@ -126,6 +130,7 @@ $("#contactM").click(function(){
 	$("#display").fadeIn(750);
 	setTimeout(() => {
 		$("#display").html(contact);
+		window.scrollTo(0, document.body.scrollHeight);
 	}, 750)
 });
 
@@ -162,10 +167,10 @@ function animate(){
 }
 function animateM(){
 	$("#br1").animate({ 'margin-left': "+=35%"}, 350 );
-	$("#br2").animate({ 'margin-left': "+=10%"}, 100 );
-	$("#br3").animate({ 'margin-left': "+=72.5%"}, 725 );
-	$("#br4").animate({ 'margin-left': "+=25%"}, 250 );
-	$("#br5").animate({ 'margin-left': "+=62.5%"}, 625 );
+	$("#br2").animate({ 'margin-left': "+=2.5%"}, 100 );
+	$("#br3").animate({ 'margin-left': "+=70%"}, 700 );
+	$("#br4").animate({ 'margin-left': "+=15%"}, 150 );
+	$("#br5").animate({ 'margin-left': "+=60%"}, 600 );
 	$("#br6").animate({ 'margin-left': "+=10%"}, 100 );
 }
 //

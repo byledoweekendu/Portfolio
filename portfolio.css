@@ -37,6 +37,17 @@ nav{
     z-index: 1;
 }
 
+.navbar{
+    background-color: rgb(50, 50, 50);
+    padding: 15px;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
 #nextTo1, #nextTo2{
     display: flex;
     justify-content: space-between;
@@ -243,6 +254,7 @@ p{
     align-items: center;
     position: sticky;
     top: 0;
+    z-index: 1;
 }
   
 .burger-menu{
@@ -259,21 +271,25 @@ p{
 }
   
 .menu{
-    list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
+    list-style-type: none;
 }
   
-.menu li{
-    margin: 0 15px;
+li{
+    height: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }  
 
 a{
     text-decoration: none;
 }
 
-.btn{
+.btn, .btnM{
     width: 9%;
     height: 40px;
     border: 0;
@@ -288,31 +304,18 @@ a{
     font-size: 1rem;
     font-weight: bold;
     font-family: 'Exo', sans-serif;
+    cursor: pointer;
 }
 
 .btnM{
-    text-decoration: none;
-    color: red;
-    font-weight: bold;
-}
-
-.btn:visited{
-    color: red;
-}
-
-.btnM:visited{
-    color: red;
+    background-color: rgb(50, 50, 50);
+    height: 20px;
 }
 
 .btn:hover{
     font-size: 1.15rem;
     color: orangered;
-    cursor: pointer;
     transition: 400ms font-size;
-}
-
-.btnM:hover{
-    font-size: 1rem;
 }
 
 .projectImg:hover, .projectTile:hover, .contactTile:hover{
@@ -480,17 +483,15 @@ a{
     .menu.show{
         display: flex;
     }
-    .menu li{
-        margin: 10px;
+    li{
+        margin: 7.5px;
         text-align: center;
     }
   }
     
   @media only screen and (max-width: 600px) {
     .btnM{
-        font-size: 0.75rem;
-    }
-    .btnM:hover{
+        width: 25%;
         font-size: 0.75rem;
     }
     #hi, #profession{
@@ -572,9 +573,6 @@ a{
 
   @media only screen and (max-width: 375px) {
     .btnM{
-        font-size: 0.6rem;
-    }
-    .btnM:hover{
         font-size: 0.6rem;
     }
     #profession{
