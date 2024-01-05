@@ -84,6 +84,7 @@ $("#skills").click(function(){
 	$("#display").fadeIn(750);
 	setTimeout(() => {
 		$("#display").html(skills);
+		animate();
 	}, 750)
 });
 
@@ -92,6 +93,7 @@ $("#skillsM").click(function(){
 	$("#display").fadeIn(750);
 	setTimeout(() => {
 		$("#display").html(skills);
+		animate();
 	}, 750)
 });
 
@@ -150,4 +152,12 @@ document.addEventListener('DOMContentLoaded', function(){
     });
 });
 //
+function animate(){
+	$("#br1").animate({ 'margin-left': "+=50%"}, 500 );
+	$("#br2").animate({ 'margin-left': "+=30%"}, 300 );
+	$("#br3").animate({ 'margin-left': "+=75%"}, 750 );
+	$("#br4").animate({ 'margin-left': "+=40%"}, 400 );
+	$("#br5").animate({ 'margin-left': "+=65%"}, 650 );
+	$("#br6").animate({ 'margin-left': "+=25%"}, 250 );
+}
 //

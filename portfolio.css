@@ -60,6 +60,7 @@ nav{
     justify-content: center;
     padding: 2.5%;
     margin-left: 2.5%;
+    position: relative;
 }
 
 #footer{
@@ -230,28 +231,7 @@ p{
     text-align: center;
 }
 
-#br1{
-    margin-left: 50%;
-}
-
-#br2{
-    margin-left: 30%;
-}
-
-#br3{
-    margin-left: 75%;
-}
-
-#br4{
-    margin-left: 40%;
-}
-
-#br5{
-    margin-left: 65%;
-}
-
-#br6{
-    margin-left: 25%;
+#br6{ 
     width: 50%;
 }
 
@@ -288,6 +268,10 @@ p{
 .menu li{
     margin: 0 15px;
 }  
+
+a{
+    text-decoration: none;
+}
 
 .btn{
     width: 9%;
