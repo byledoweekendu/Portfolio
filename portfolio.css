@@ -84,7 +84,7 @@ nav{
 
 #prof{
     margin-top: 50px;
-    border-radius: 75px;
+    border-radius: 40%;
     box-shadow: gray 0px 8px 24px, gray 0px 16px 56px, gray 0px 24px 80px;
 }
 
@@ -298,7 +298,7 @@ a{
     justify-content: center;
     align-items: flex-end;
     background-color: rgb(40,40,40);
-    color: red;
+    color: greenyellow;
     outline: none;
     text-decoration: none;
     font-size: 1rem;
@@ -314,7 +314,7 @@ a{
 
 .btn:hover{
     font-size: 1.15rem;
-    color: orangered;
+    color: rgb(211, 255, 146);
     transition: 400ms font-size;
 }
 
