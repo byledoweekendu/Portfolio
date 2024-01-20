@@ -97,6 +97,11 @@ h2{
     color: orangered;
 }
 
+.descr{
+    margin: 0 auto 25px auto;
+    color: orangered;
+}
+
 span{
     font-size: 24px;
     font-weight: bold;

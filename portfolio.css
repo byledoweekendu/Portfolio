@@ -26,7 +26,7 @@ body{
 
 #container{
     width: 100%;
-    height: 100vh;
+    height: 70vh;
 }
 
 nav{
@@ -53,7 +53,7 @@ nav{
     justify-content: space-between;
     align-items: center;
     width: 90%;
-    height: 70vh;
+    height: 100%;
     margin: 50px auto 0 auto;
 }
 
@@ -74,6 +74,12 @@ nav{
     position: relative;
 }
 
+#scrollPoint{
+    height: 1px;
+    width: 1px;
+    margin: -50px 0 50px 0;
+}
+
 #footer{
     width: 50%;
     display: flex;
@@ -83,29 +89,28 @@ nav{
 }
 
 #prof{
+    width: 30%;
+    height: auto;
+    border-radius: 1%;
     margin-top: 50px;
-    border-radius: 40%;
-    box-shadow: gray 0px 8px 24px, gray 0px 16px 56px, gray 0px 24px 80px;
+    box-shadow: gray 0px 54px 55px, gray 0px -12px 30px, gray 0px 4px 6px, gray 0px 12px 13px, gray 0px -3px 5px;
 }
 
 .projects{
     width: 103%;
-    height: 300px;
-    margin: 25px 0 25px 0;
+    height: 200px;
+    margin: 35px 0 35px 0;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     overflow-x: scroll;
 }
 
-.projectTile{
-    width: 300px;
-    height: 150px;
-    margin: 0 2% 0 2%;
-}
-
-.projectImg{
+.projectTile, .projectImg{
+    width: 250px;
+    height: 125px;
     border-radius: 15px;
+    margin: 0 5% 0 5%;
 }
 
 .projectName{
@@ -116,7 +121,7 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 15px;
+    margin: 15px 0;
     width: 100%;
 }
 
@@ -124,7 +129,7 @@ nav{
     border-radius: 25px;
 }
 
-.text, .text2, .text3{
+.text, .text2, .text3, .text4, .text5{
     color: white;
     font-family: 'Exo', sans-serif;
     font-weight: bold;
@@ -143,6 +148,20 @@ nav{
     justify-content: center;
     align-items: center;
     margin-left: 7px;
+}
+
+.text4{
+    margin: 20px auto;
+    text-align: center;
+    font-size: 1.15rem;
+}
+
+.text5{
+    text-align: center;
+    margin: 10px auto;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 1.15rem;
 }
 
 #hi, #profession{
@@ -167,7 +186,12 @@ nav{
 }
 
 #description{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    color: silver;
+}
+
+#cardDescr{
+    font-size: 1.2rem;
     color: silver;
 }
 
@@ -336,73 +360,13 @@ a{
 }
 
    @media only screen and (max-width: 1440px) {
-    body{
-        overflow: hidden;
-    }
     .btn{
         width: 12%;
     }
     #footer{
         margin-left: 45%;
     }
-    .projects{
-        width: 85%;
-    }
     form{
-        width: 75%;
-    }
-  } 
-
-  @media only screen and (max-width: 1366px) {
-    #hi, #profession{
-        font-size: 2rem;
-    }
-    #description{
-        font-size: 1.25rem;
-    }
-    #br6{
-        width: 75%;
-    }
-    #footer{
-        margin-left: 50%;
-    }
-    .projects{
-        width: 47.5%;
-        margin-left: 20%;
-    }
-    form{
-        width: 85%;
-    }
-    .text2{
-        margin: 0 auto;
-    }
-    .projects{
-        overflow-x: hidden;
-        overflow-y: scroll;
-        width: 60%;
-        height: 210px;
-        flex-direction: column;
-        margin: 25px auto;
-    }
-    .projectTile{
-        margin-bottom: 90px;
-    }
-    .projectImg:hover, .projectTile:hover{
-        margin-top: 0;
-    }
-    #send{
-        width: 30%;
-    }
-  }
-  
-  @media only screen and (max-width: 1024px) {
-    body{
-        overflow: visible;
-    }
-    #container{
-        height: 100%;
-    }
-    #display, #nextTo1{
         width: 75%;
     }
     nav{
@@ -410,6 +374,75 @@ a{
         position: sticky;
         top: 0;
     }
+    #display, #nextTo1{
+        width: 75%;
+    }
+    #nextTo1{
+        flex-direction: column;
+        height: 100%;
+    }
+    #display{
+        margin-top: 50px;
+        padding: 0;
+    }
+    #container{
+        height: 100%;
+    }
+    .projectTile, .projectImg{
+        width: 94%;
+        height: 150px;
+    }
+    #footer{
+        margin: 50px auto 25px auto;
+    }
+    .projects{
+        overflow-x: hidden;
+        overflow-y: scroll;
+        width: 50%;
+        height: 225px;
+        flex-direction: column;
+        margin: 50px auto;
+    }
+    .projectTile{
+        margin-bottom: 90px;
+    }
+    .projectImg:hover, .projectTile:hover{
+        margin-top: 0;
+    }
+    .text2{
+        margin: 0 auto;
+    }
+    .text{
+        text-align: center;
+    }
+    .btn{
+        justify-content: center;
+        align-items: center;
+    }
+  } 
+
+  @media only screen and (max-width: 1366px) {
+    #hi, #profession{
+        font-size: 2rem;
+    }
+    #description, #cardDescr, .text4, .text5{
+        font-size: 1.25rem;
+    }
+    #br6{
+        width: 75%;
+    }
+    form{
+        width: 85%;
+    }
+    #send{
+        width: 30%;
+    }
+    .text5{
+        margin: 25px 0 25px 0;
+    }
+  }
+  
+  @media only screen and (max-width: 1024px) {
     .btn{
         width: 15%;
         font-size: 1rem;
@@ -419,31 +452,27 @@ a{
     a:hover{
         font-size: 1.1rem;
     }
-    #nextTo1{
-        flex-direction: column;
-        height: 100%;
-    }
     #prof{
         margin: 0;
     }
-    #footer{
-        margin: 50px auto 25px auto;
-    }
-    #description{
+    #description, #cardDescr, .text4, .text5{
         margin: 0 auto;
         font-size: 1.2rem;
         text-align: center;
     }
-    .projectTile, .projectImg{
-        width: 97.5%;
-        height: 150px;
+    .text5{
+        margin: 25px 0 25px 0;
     }
-    #display{
-        margin-top: 50px;
+    .projects{
+        width: 65%;
     }
   }
 
   @media only screen and (max-width: 768px) {
+    .btnM{
+        justify-content: center;
+        align-items: center;
+    }
     #hi, #profession{
         font-size: 1.5rem;
     }
@@ -453,7 +482,7 @@ a{
     #welcome{
         font-size: 1.25rem;
     }
-    #description{
+    #description, #cardDescr, .text4, .text5{
         font-size: 1rem;
     }
     form{
@@ -500,7 +529,7 @@ a{
     #welcome{
         font-size: 1.1rem;
     }
-    #description{
+    #description, #cardDescr, .text4, .text5{
         font-size: 0.9rem;
     }
     #br6{
@@ -508,7 +537,7 @@ a{
     }
     .text2{
         font-size: 1rem;
-        margin-top: 75px;
+        margin-top: 35px;
     }
     .text3{
         font-size: 1.2rem;
@@ -549,7 +578,7 @@ a{
     #welcome{
         font-size: 0.75rem;
     }
-    #description{
+    #description, #cardDescr, .text4, .text5{
         font-size: 0.75rem;
     }
     form{
@@ -578,7 +607,7 @@ a{
     #profession{
         font-size: 0.8rem;
     }
-    #description{
+    #description, #cardDescr, .text4, .text5{
         font-size: 0.7rem;
     }
     .projects{
@@ -606,7 +635,7 @@ a{
         width: 145%;
         margin-left: -18%;
     }
-    #description{
+    #description, #cardDescr, .text4, .text5{
         font-size: 0.55rem;
     }
   }

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DREW-LIS</title>
+    <meta name="description" content="Firma Dawid Liszczyński.">
+    <meta name="keywords" content="Dawid, Liszczyński, Firma, Produkty, Drewniane, Stolarka, Drewno, DREW-LIS">
+    <meta name="author" content="Jacek Szymański Front-end developer">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    <link rel="stylesheet" href="firma.css">
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@100;300&display=swap" rel="stylesheet">
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.pack.js"></script>
+</head>
+<body>
+    <div id="container">
+        <nav>
+            <img src='obrazy/logo.svg' alt='logo' id="logo"><h1>DREW-LIS</h1>
+            <button id="burger"></button>
+            <div id="buttons">
+                <button id="main" class="btn">Strona Główna</button>
+                <a href = "#page-2" id="company" class="btn">O Firmie</a>
+                <div id="sub-menu">
+                    <button id="projects" class="btn">Projekty</button>
+                      <div id="categories">
+                        <button id="place" class="btnL">Place Zabaw</button>
+                        <button id="ogrodowe" class="btnL">Meble Ogrodowe</button>
+                        <button id="drewutnie" class="btnL">Drewutnie</button>
+                        <button id="donice" class="btnL">Donice/Pergole</button>
+                        <button id="zamówienie" class="btnL">Inne</button>
+                    </div>
+                </div>
+                <a href="#footer" id="contact" class="btn">Kontakt</a>
+                <button id="dark" class="theme"></button>
+                <button id="bright" class="theme"></button>
+            </div>
+        </nav>
+        <div id="list">
+            <button id="mainM" class="btnM">Strona Główna</button>
+            <a href = "#page-2" id="companyM" class="btnM">O Firmie</a>
+            <button id="projectsM" class="btnM">Projekty</button>
+            <div id="categoriesMobile">
+                <button id="placeM" class="btnM">Place Zabaw</button>
+                <button id="ogrodoweM" class="btnM">Meble Ogrodowe</button>
+                <button id="drewutnieM" class="btnM">Drewutnie</button>
+                <button id="doniceM" class="btnM">Donice/Pergole</button>
+                <button id="zamówienieM" class="btnM">Inne</button>
+            </div>
+            <button id="contactM" class="btnM">Kontakt</button>
+            <div id="nextTo">
+                <button id="darkM" class="theme"></button>
+                <button id="brightM" class="theme"></button>
+            </div>
+        </div>
+        <div id="page-1" class="scroll-page">
+            <img src='obrazy/picture.jpg' alt='background' id="picture">
+        </div>
+        <div id="page-2" class="scroll-page">
+            <div id="sideL" class="side">
+                <ul>Witam na stronie mojej firmy. Serdecznie zapraszam do zapoznania się z przykładami moich projektów poniżej.</ul>
+                <ul>Każdy z tych projektów wykonam indywidualnie pod konkretne zamówienie.</ul>
+                <ul>Jeśli żaden z projektów nie przypada do gustu, jest możliwość zaproponowania i stworzenia własnego od zera.</ul>
+                <ul>W przypadku chęci złożenia zamówienia jak i uzyskania większej ilości informacji, proszę o kontakt telefoniczny lub mailowy przez formularz poniżej.</ul>
+            </div>
+            <div id="sideR" class="side">
+                <li>Place Zabaw</li>
+                <li>Meble Ogrodowe</li>
+                <li>Drewutnie</li>
+                <li>Donice i Pergole</li>
+                <li>Przedmioty pod zamówienie</li>
+            </div>
+        </div>
+        <div id="scrollPoint"></div>
+        <div id="page-3" class="grid">
+            <div class="tile"><span>Place zabaw</span><img src="obrazy/place/plac.jpg" alt="Place zabaw" id="m1" class="minature"></div>
+            <div class="tile"><span>Meble Ogrodowe</span><img src="obrazy/ogrodowe/stolilawki.jpg" alt="Meble Ogrodowe" id="m2" class="minature"></div>
+            <div class="tile"><span>Drewutnie</span><img src="obrazy/drewutnie/drewutnia.jpg" alt="Drewutnie" id="m3" class="minature"></div>
+            <div class="tile"><span>Donice/Pergole</span><img src="obrazy/donice/pergola2.jpg" alt="Donice/Pergole" id="m4" class="minature"></div>
+            <div class="tile"><span>Inne</span><img src="obrazy/inne/jakuzzi.jpg" alt="Inne" id="m5" class="minature"></div>
+        </div>
+        <button id="back" class="cancel">Powrót</button>
+        <button id="X" class="cancel">Powrót</button>
+        <div id="footer">
+            <form class="contact" action="https://formsubmit.co/drewlisstolarstwo@gmail.com" method="POST">
+                <h3>Wyślij nam wiadomość</h3>
+                <input id="mail" name="mail" type="mail" placeholder="Wpisz swój email"/>
+                <textarea id="msg" name="msg" rows="5" placeholder="Wpisz wiadomość"></textarea>
+                <input id="send" value="Prześlij" type="submit"/>
+            </form>
+            <a href="tel:+48721430357" id="call">Zadzwoń: 721430357</a>
+            <a href="#footer" class="contactTile"><img src="obrazy/fb.png" class="contactImg" alt="Facebook"/></a>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1229.2625030871468!2d16.06783258119664!3d51.96085275299961!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4705dd723ed27217%3A0x29511f510f6c5171!2sBagno%2048A%2C%2067-410%20Bagno!5e0!3m2!1spl!2spl!4v1704913718489!5m2!1spl!2spl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+    <script src="firma.js"></script>
+</body>
+</html>

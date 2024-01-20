@@ -1,12 +1,18 @@
 <!DOCTYPE html>
-<html lang="pl">
-<head>
-    <meta charset="UTF-8">
+
+<html>
+
+  <head>
+
+    <meta charset=“UTF-8”>
+
     <title>Kalkulator wydatków</title>
     <link rel="stylesheet" href="kalkulator.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
-</head>
-<body>
+
+  </head>
+
+  <body>
     <div id="content">
         <h1>Kalkulator wydatków</h1>
         <div id="nextTo">
@@ -19,21 +25,23 @@
             <input type="number" id="meds" placeholder="Za leki">
             <input type="number" id="fuel" placeholder="Za paliwo">
             <input type="number" id="bills" placeholder="Za rachunki">
-            <input type="number" id="others" placeholder="Za inne">    
+            <input type="number" id="others" placeholder="Za inne">
+            <input type="number" id="salary" placeholder="Przychód">
         </div>
         <div class="counters">
-          <div class="counter"><h2>Spożywcze:</h2><span id="food-sum"></span></div>
-          <div class="counter"><h2>Chemia:</h2><span id="chemistry-sum"></span></div>
-          <div class="counter"><h2>Spożywcze i Chemia:</h2><span id="foodAndChemistrySum"></span></div>
+          <div class="counter"><span class="descr">Spożywcze:</span><span id="food-sum"></span></div>
+          <div class="counter"><span class="descr">Chemia:</span><span id="chemistry-sum"></span></div>
+          <div class="counter"><span class="descr">Spożywcze i Chemia:</span><span id="foodAndChemistrySum"></span></div>
         </div>
         <div class="counters">
-          <div class="counter"><h2>Leki:</h2><span id="meds-sum"></span></div>
-          <div class="counter"><h2>Paliwo:</h2><span id="fuel-sum"></span></div>
-          <div class="counter"><h2>Rachunki:</h2><span id="bills-sum"></span></div>
+          <div class="counter"><span class="descr">Leki:</span><span id="meds-sum"></span></div>
+          <div class="counter"><span class="descr">Paliwo:</span><span id="fuel-sum"></span></div>
+          <div class="counter"><span class="descr">Inne:</span><span id="others-sum"></span></div>
+          <div class="counter"><span class="descr">Rachunki:</span><span id="bills-sum"></span></div>
         </div>
         <div class="counters">
-          <div class="counter"><h2>Inne:</h2><span id="others-sum"></span></div>
-          <div class="counter"><h2>Suma:</h2><span id="sum"></span></div>
+          <div class="counter"><span class="descr">Suma:</span><span id="sum"></span></div>
+          <div class="counter"><span class="descr">Bilans:</span><span id="diff"></span></div>
           <div class="counter" id="last"><h2>Historia:</h2><div id="list"></div></div>
         </div>
     </div>
