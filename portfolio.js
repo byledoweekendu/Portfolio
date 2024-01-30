@@ -54,20 +54,22 @@ const prices = `<span class="text4">Średni koszt strony w 2024:</span>
 zlecając stronę w dużej agencji interaktywnej. Średni koszt stworzenia strony internetowej w 2024 r. 
 na polskim rynku przez profesjonalnego wykonawcę może wynosić około 4000 do 8000 zł. 
 Cena projektu i wdrożenia strony internetowej może znacznie wzrosnąć, jeśli Twój projekt jest niestandardowy i wymaga dedykowanych rozwiązań.”</span>
-<span class="text4">U mnie strona kosztuje od 1500zł do 3000zł, natomiast najprostsza wizytówkowa 1000zł.</br></br>
+<span class="text4">U mnie strona kosztuje(zależnie od stopnia skomplikowania) od 1000zł do 2000zł, natomiast najprostsza wizytówkowa od 500zł do 750zł.</br></br>
 Do kosztów strony należy wliczyć też hosting(do 300zł) oraz domenę i certyfikat SSL(do 200zł) na rok.</br></br></br>
 Wizytówka google jest darmowa, google nie pobiera opłat za założenie i utrzymanie.</br></br>
 Opłata jest natomiast za zlecenie założenia i zarządzania taką wizytówką.</span>
 <span class="text5">„Działania obejmujące optymalizację i promocję firmy w Google należą do bardziej skomplikowanych, 
 dlatego warto rozważyć powierzenie ich fachowcom. Koszt pozycjonowania wizytówki Google Maps zazwyczaj mieści się w przedziale 500-1000 zł.”</span>
-<span class="text4">U mnie koszt założenia takiej wizytówki to 100zł, a koszt zarządzania 250zł na miesiąc.</br></br>
+<span class="text4">U mnie koszt założenia i optymalizacji takiej wizytówki to 100zł, a koszt zarządzania 150zł na miesiąc.</br></br>
 Czas współpracy przy wizytówce jest dowolny, działam tak długo jak tylko będzie potrzeba.</span>`
 
-const contact = `<form action="https://formsubmit.co/byledoweekendu1995@gmail.com" method="POST">
-<input type="hidden" name="_next" value="https://jacekszymanskiportfolio.cba.pl/index.html">
+const contact = `<form action="https://formsubmit.co/jacekszymanskifronenddeveloper@gmail.com" method="POST">
 <p>Wyślij mi wiadomość</p>
 <input id="fullName" name="name" type="text" placeholder="Wpisz swoje imię" required/>
 <input id="mail" name="mail" type="mail" placeholder="Wpisz swój email" required/>
+<input type="hidden" name="_next" value="https://jacekszymanskiportfolio.cba.pl/dziekuje.html">
+<input type="hidden" name="_subject" value="Nowa wiadomość z portfolio">
+<input type="hidden" name="_captcha" value="false">
 <textarea id="msg" name="msg" rows="3" placeholder="Wpisz wiadomość" required></textarea>
 <input id="send" value="Wyślij" type="submit"/>
 </form>

@@ -324,6 +324,7 @@ textarea{
 
 textarea{
     height: 100px;
+    resize: none;
 }
 
 #dark, #darkM{

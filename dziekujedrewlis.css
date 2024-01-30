@@ -1,0 +1,91 @@
+body{
+    background-color: rgb(40,40,40);
+    margin: 0;
+    border: 0;
+    font-family: 'Exo', sans-serif;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#picture{
+    width: 40%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: rgba(75, 75, 75, 0.753) 0px 0px 12px;
+}
+
+span{
+    font-size: 3rem;
+    color: gold;
+}
+
+a{
+    font-size: 1.5rem;
+    text-decoration: none;
+    outline: none;
+    background: none;
+    color: red;
+}
+
+a:visited{
+    color: red;
+}
+
+a:hover{
+    color: orangered;
+    transition: color 400ms;
+}
+
+  @media only screen and (max-width: 1366px) {
+    #picture{
+        width: 30%;
+    }
+  }
+  
+  @media only screen and (max-width: 1024px) {
+    span{
+        font-size: 2rem;
+    }
+    a{
+        font-size: 1rem;
+    }
+    #picture{
+        width: 50%;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    #picture{
+        width: 65%;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    #picture{
+        width: 70%;
+    }
+  }
+
+  @media only screen and (max-width: 425px) {
+    #picture{
+        width: 75%;
+    }
+    span{
+        font-size: 1.5rem;
+    }
+  }
+
+  @media only screen and (max-width: 375px) {
+    #picture{
+        width: 80%;
+    }
+  }
+
+  @media only screen and (max-width: 320px) {
+    #picture{
+        width: 85%;
+    }
+  }

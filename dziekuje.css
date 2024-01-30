@@ -1,0 +1,83 @@
+body{
+    background-color: rgb(40,40,40);
+    margin: 0;
+    border: 0;
+    font-family: 'Exo', sans-serif;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#prof{
+    width: 20%;
+    height: auto;
+    border-radius: 1%;
+    margin-top: 50px;
+    box-shadow: gray 0px 54px 55px, gray 0px -12px 30px, gray 0px 4px 6px, gray 0px 12px 13px, gray 0px -3px 5px;
+}
+
+span{
+    font-size: 3rem;
+    color: gold;
+}
+
+a{
+    font-size: 1.5rem;
+    text-decoration: none;
+    outline: none;
+    background: none;
+    color: red;
+}
+
+a:visited{
+    color: red;
+}
+
+a:hover{
+    color: orangered;
+    transition: color 400ms;
+}
+
+  @media only screen and (max-width: 1366px) {
+    #prof{
+        width: 30%;
+    }
+  }
+  
+  @media only screen and (max-width: 1024px) {
+    span{
+        font-size: 2rem;
+    }
+    a{
+        font-size: 1rem;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    #prof{
+        width: 35%;
+    }
+  }
+
+  @media only screen and (max-width: 425px) {
+    #prof{
+        width: 45%;
+    }
+    span{
+        font-size: 1.5rem;
+    }
+  }
+
+  @media only screen and (max-width: 375px) {
+    #prof{
+        width: 55%;
+    }
+  }
+
+  @media only screen and (max-width: 320px) {
+    #prof{
+        width: 65%;
+    }
+  }

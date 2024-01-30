@@ -85,7 +85,8 @@ function operationsTimeout(){
     fade();
     const place = `<img src='obrazy/place/plac.jpg' alt='Plac zabaw' id='p1' class='minatureRS'>
     <img src='obrazy/place/plac2.jpg' alt='Plac zabaw 2' id='p2' class='minatureRS'>
-    <img src='obrazy/place/plac3.jpg' alt='Plac zabaw 3' id='p3' class='minatureRS'>`;
+    <img src='obrazy/place/plac3.jpg' alt='Plac zabaw 3' id='p3' class='minatureRS'>
+    <img src='obrazy/place/plac4.jpg' alt='Plac zabaw 4' id='p4' class='minatureRS'>`;
     lastSeen = place;
     setTimeout(() => {
         $("#page-3").html(place);
@@ -255,6 +256,14 @@ document.addEventListener('click', (e) => {
             $("#page-3").html(`<span class="sign"></span>
             <div class="projects">
             <img src='obrazy/place/plac3.jpg' alt='Plac zabaw 3' class='minatureGallery'>
+            </div>`);
+        break;
+        case 'p4':
+            handle();
+            $("#page-3").html(`<span class="sign"></span>
+            <div class="projects">
+            <img src='obrazy/place/plac4.jpg' alt='Plac zabaw 4' class='minatureGallery'>
+            <img src='obrazy/place/plac4galeria1.jpg' alt='Plac zabaw 4' class='minatureGallery'>
             </div>`);
         break;
         //
