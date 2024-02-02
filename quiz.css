@@ -48,7 +48,7 @@ body{
     font-style: italic;
 }
 
-#answers, #nextTo1, #history{
+#answers, #nextTo1, #history, #box{
     width: 75%;
     height: 60vh;
     display: flex;
@@ -59,9 +59,20 @@ body{
     border-radius: 10px;
 }
 
-#answers, #history{
+#box, #history{
     width: 50%;
     height: 50vh;
+}
+
+#answers{
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;   
+    grid-row-gap: 0px;
+    justify-items: center;
+    align-items: center;
 }
 
 #history{
@@ -100,10 +111,13 @@ body{
     border-radius: 15px;
 }
 
-#btn, .answer{
+#btn, .answer, .answerBefore, #exit{
     width: 25%;
     height: 30px;
-    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
     border: none;
     outline: none;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -113,8 +127,34 @@ body{
     background-color: orangered;
 }
 
+#btn{
+    background-color: rgb(40, 40, 40);
+    color: goldenrod;
+}
+
+#exit{
+    width: 20%;
+    background-color: red;
+    display: none;
+}
+
 .answer{
     width: 50%;
+}
+.answerBefore{
+    width: 50%;
+}
+
+#solution{
+    display: none;
+    width: 35%;
+    height: 25px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: bold;
 }
 
 ol{
@@ -123,16 +163,7 @@ ol{
     color: rgb(0, 173, 0);
 }
 
-.prevent-click {
-    pointer-events: none;
-}
-
-#btn{
-    background-color: rgb(40, 40, 40);
-    color: goldenrod;
-}
-
-.answer:hover{
+.answerBefore:hover{
     background-color: rgb(255, 99, 42);
     color: silver;
     cursor: pointer;
@@ -145,3 +176,119 @@ ol{
     cursor: pointer;
     transition: color 300ms;
 }
+
+#exit:hover{
+    background-color: rgb(255, 45, 45);
+    color: silver;
+    transition: background-color 350ms;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1024px){
+    #icon{
+        margin-top: -5%;
+    }
+    #solution{
+        font-size: 0.85rem;
+    }
+    #exit{
+        font-size: 0.95rem;
+    }
+    ol{
+        width: 100%;
+        text-align: center;
+        padding: 0;
+    }
+    .answerBefore{
+        width: 75%;
+    }
+  }
+
+@media only screen and (max-width: 768px){
+    #icon{
+        margin-top: 0;
+    }
+    #solution{
+        width: 50%;
+    }
+    #exit{
+        width: 40%;
+    }
+    #btn, .counter{
+        font-size: 1rem;
+    }
+    .answer{
+        width: 75%;
+    }
+    .answerBefore{
+        font-size: 1rem;
+    }
+  }
+
+  @media only screen and (max-width: 625px){
+    #container{
+        height: auto;
+    }
+    #nextTo1{
+        height: auto;
+        flex-direction: column;
+        padding: 2.5%;
+    }
+    #nextTo2{
+        margin-bottom: 5%;
+    }
+    #icon{
+        margin: 3.5% 0;
+    }
+    #history{
+        margin: 3.5% 0;
+        width: 85%;
+    }
+    #box{
+        width: 80%;
+    }
+    #questions{
+        font-size: 1.5rem;
+    }
+    #solution{
+        width: 75%;
+    }
+    #btn{
+        color: orangered;
+    }
+    .answerBefore{
+        width: 90%;
+    }
+  }
+
+  @media only screen and (max-width: 425px){
+    #btn{
+        font-size: 0.85rem;
+    }
+    #history{
+        width: 100%;
+    }
+    ol{
+        font-size: 0.85rem;
+    }
+    #icon{
+        margin: 5% 0;
+    }
+    #btn, .counter{
+        width: 30%;
+        font-size: 0.75rem;
+    }
+    .answerBefore{
+        font-size: 0.85rem;
+    }
+    #questions{
+        font-size: 1.15rem;
+    }
+  }
+  @media only screen and (max-width: 350px){
+    #history{
+        padding: 2.5%;
+        overflow-x: hidden;
+        width: 95%;
+    }
+  }

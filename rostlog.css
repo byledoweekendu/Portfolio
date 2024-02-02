@@ -1,0 +1,487 @@
+::-webkit-scrollbar {
+    width: 15px;
+}
+  
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px silver;
+    border-radius: 10px;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: gray;
+    border-radius: 10px;
+}
+
+html{
+    font-family: 'Exo', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #9C9C9C;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+#container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav{
+    height: 60px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    z-index: 2;
+    background-color: #646464;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+#buttons{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#nextTo{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#logo{
+    width: 50px;
+    height: 50px;
+    border-radius: 5%;
+    margin-right: 2.5%;
+}
+
+.scroll-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 7%;
+    position: relative;
+}
+
+#page-1{
+    justify-content: space-around;
+    height: 80vh;
+    margin-top: 2.5%;
+}
+
+#page-2, #page-3{
+    width: 90%;
+    height: auto;
+    padding: 2.5%;
+    font-size: 1.8rem;
+    color: white;
+    text-align: center;
+    background-color: #747474;
+    border-radius: 1%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+#page-2{
+    margin-top: 6%;
+}
+
+#photos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo{
+    width: 100%;
+    height: auto;
+    border-radius: 1%;
+    box-shadow: silver 0px 35px 35px, silver 0px -12px 30px, silver 0px 4px 6px, silver 0px 12px 13px, silver 0px -3px 5px;
+}
+
+#footer{
+    width: 100%;
+    height: 325px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 200px 0 25px 0;
+    background-color: #747474;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.contact{
+    height: 315px;
+    width: 22.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: -5% 0 0 0;
+    box-shadow: rgba(75, 75, 75, 0.753) 0px 0px 12px;
+    border-radius: 15px;
+    background: rgb(100, 100, 100);
+}
+
+iframe{
+    width: 20%;
+    height: 275px;
+    margin-top: -5%;
+    border-radius: 7px;
+    box-shadow: silver 0px 0px 12px;
+}
+
+.contactTile, .contactImg{
+    width: 75px;
+    height: 75px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    border: none;
+    outline: none;
+}
+
+h1{
+    color: white;
+    font-size: 1.5rem;
+    width: 30%;
+    text-align: center;
+}
+
+h3{
+    font-style: italic;
+    font-family: 'Exo', sans-serif;
+    color: white;
+}
+
+#mail, 
+textarea{
+    height: 25px;
+    width: 80%;
+    border-radius: 5px;
+    border: 2px solid rgb(179, 179, 179);
+    outline: none;
+    font-size: 14px;
+    font-family: 'Exo', sans-serif;
+}
+
+textarea{
+    height: 100px;
+    resize: none;
+}
+
+#burger{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 10%;
+    outline: none;
+    border: none;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    background-image: url("zdjecia/bar.png");
+    background-repeat: no-repeat;
+    background-size: 80% 80%;
+    background-position: center;
+    margin-left: 1%;
+}
+
+#list{
+    display: none;
+    position: absolute;
+    top: 60px;
+    z-index: 2;
+    width: 35%;
+    height: 35vh;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: rgb(90, 90, 90);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    border-radius: 1.5%;
+}
+
+#call{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: italic;
+    font-family: 'Exo', sans-serif;
+    width: 15%;
+    border-radius: 3px;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+}
+
+#send{
+    height: 25px;
+    width: 75px;
+    border: 2px solid rgb(0, 230, 0);
+    border-radius: 5px;
+    background-color: rgb(0, 255, 0);
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    font-size: 16px;
+    font-family: 'Exo', sans-serif;
+}
+
+.btn{
+    width: 12%;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    font-family: 'Exo', sans-serif;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+
+.btnM{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+#send:hover{
+    background-color: rgb(155, 255, 0);
+    border-color: rgb(100, 250, 0);
+    color: white;
+    transition: 300ms color;
+}
+
+#call:visited{
+    color: white;
+}
+
+.btnM:visited{
+    color: white;
+}
+
+.btn:hover, #call:hover{
+    color: silver;
+    transition: 300ms color;
+}
+
+.contactTile:hover{
+    box-shadow: rgb(0, 110, 255) 0px 0px 10px;
+    margin-top: -12px;
+    color: rgb(225, 225, 225);
+    transition: margin-top 300ms;
+}
+
+@media only screen and (max-width: 1600px){
+    #call{
+        width: 25%;
+    }
+    iframe{
+        height: 250px;
+        margin-top: -7.5%;
+    }
+    h1{
+        font-size: 1.25rem;
+        width: 35%;
+    }
+    #page-2, #page-3{
+        font-size: 1.5rem;
+    }
+    #page-2{
+        margin-top: 7%;
+    }
+    .photo{
+        width: 90%;
+    }
+  }
+
+@media only screen and (max-width: 1366px){
+    .contact{
+        width: 27%;
+    }
+    #page-2, #page-3{
+        font-size: 1.35rem;
+        margin-top: 8.5%;
+    }
+    h1{
+        width: 37.5%;
+        font-size: 1.15rem;
+    }
+    iframe{
+        height: 200px;
+        margin-top: -10%;
+    }
+  }
+
+@media only screen and (max-width: 1024px){
+    #footer{
+        flex-direction: column;
+        height: 950px;
+        margin-top: 100px;
+    }
+    iframe{
+        margin: 0;
+        width: 40%;
+    }
+    .contact{
+        width: 60%;
+        height: 425px;
+    }
+    .contactTile:hover{
+        margin-top: 0;
+    }
+    #call{
+        width: 100%;
+    }
+    #buttons{
+        display: none;
+    }
+    #burger{
+        display: block;
+    }
+    h1{
+        width: 42.5%;
+        font-size: 1rem;
+    }
+    .scroll{
+        width: 0;
+        height: 0;
+        margin: -1% 0 1% 0;
+    }
+    #page-2, #page-3{
+        width: 85%;
+    }
+    #list{
+        width: 100%;
+        height: 50vh;
+    }
+  }
+
+@media only screen and (max-width: 768px){
+    .scroll{
+        margin: -5% 0 5% 0;
+    }
+    .contact{
+        width: 65%;
+        height: 400px;
+    }
+    #page-2, #page-3{
+        font-size: 1rem;
+        margin-top: 7%;
+    }
+    .contact{
+        margin-top: -7.5%;
+    }
+    h1{
+        width: 52.5%;
+        font-size: 0.9rem;
+    }
+  }
+
+  @media only screen and (max-width: 600px){
+    #footer{
+        height: 850px;
+    }
+    iframe{
+        margin: 0;
+        width: 65%;
+        height: 200px;
+    }
+    .contact{
+        width: 85%;
+        height: 350px;
+        margin-top: -50px;
+    }
+    #nextTo{
+        width: 35%;
+    }
+    h1{
+        font-size: 0.8rem;
+    }
+    .scroll{
+        margin: -7.5% 0 7.5% 0;
+    }
+    #page-1{
+        height: 40vh;
+    }
+    #page-2, #page-3{
+        font-size: 0.9rem;
+    }
+  }
+
+  @media only screen and (max-width: 425px){
+    #footer{
+        height: 750px;
+    }
+    iframe{
+        height: 150px;
+    }
+    .contact{
+        width: 80%;
+        height: 300px;
+        margin-top: -50px;
+    }
+    h1{
+        width: 45%;
+        font-size: 0.9rem;
+    }
+    #nextTo{
+        width: 60%;
+    }
+    #page-1{
+        height: 30vh;
+    }
+    #call{
+        font-size: 1.25rem;
+    }
+    .scroll{
+        margin: -13.5% 0 13.5% 0;
+    }
+    #page-2, #page-3{
+        font-size: 0.8rem;
+    }
+  }
+  @media only screen and (max-width: 350px){
+    .contact{
+        height: 260px;
+    }
+    #page-1{
+        height: 25vh;
+    }
+    h1{
+        width: 50%;
+    }
+    #nextTo{
+        width: 65%;
+    }
+    .scroll{
+        margin: -17% 0 17% 0;
+    }
+  }

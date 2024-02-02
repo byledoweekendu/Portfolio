@@ -2,6 +2,8 @@ const questions = document.querySelector('#questions');
 const icon = document.querySelector('#icon');
 const answers = document.querySelector('#answers');
 const history = document.querySelector('#history');
+const solution = document.querySelector('#solution');
+const exit = document.querySelector('#exit');
 
 class Quiz{
     constructor(id, question, answer1, answer2, answer3, answer4, correct){
@@ -177,16 +179,16 @@ const advancedQaA = [
     new Quiz(20, 'Ile to jest 10x10?', 48, 100, 120, 200, 100),
     new Quiz(21, 'Ile to jest 25x3?', 40, 55, 250, 75, 75),
     new Quiz(22, 'Ile to jest 25x10?', 70, 85, 255, 250, 250),
-    new Quiz(23, 'Ile to jest 25x4?', 60, 80, 25, '25+25+25+25', '25+25+25+25'),
-    new Quiz(24, 'Ile to jest 20x5?', '20+20', 65, 240, '20+20+20+20+20', '20+20+20+20+20'),
+    new Quiz(23, 'Ile to jest 25x4?', 60, 80, 25, 100, 100),
+    new Quiz(24, 'Ile to jest 20x5?', 40, 65, 240, 100, 100),
     new Quiz(25, 'Ile to jest 2x2?', 70, '2+2', 28, 120, '2+2'),
     new Quiz(26, 'Ile to jest 3x3?', 50, '3+3+3', 48, 170, '3+3+3'),
-    new Quiz(27, 'Ile to jest 4x4?', 90, 550, '4+4+4+4', 45, '4+4+4+4'),
-    new Quiz(28, 'Ile to jest 5x5?', 40, '5+5+5+5+5', 55, 90, '5+5+5+5+5'),
+    new Quiz(27, 'Ile to jest 4x4?', 90, 550, '8+8' , 45, '8+8'),
+    new Quiz(28, 'Ile to jest 5x5?', 40, 25, 55, 90, 25),
     new Quiz(29, 'Ile to jest 6x6?', 10, 555, '3x12', 124, '3x12'),
-    new Quiz(30, 'Ile to jest 7x7?', 50, 100, 47, '5x7+14', '5x7+14'),
+    new Quiz(30, 'Ile to jest 7x7?', 50, 100, 47, 49, 49),
     new Quiz(31, 'Ile to jest 8x8?', 75, 125, 60, '4x8 + 4x8', '4x8 + 4x8'),
-    new Quiz(32, 'Ile to jest 9x9?', 90, '9x7+18', 28, 12, '9x7+18'),
+    new Quiz(32, 'Ile to jest 9x9?', 90, 81, 28, 12, 81),
     new Quiz(33, '10x10 to 5x10 +?', '2x10', '3x10', '5x10', '8x10', '5x10'),
     new Quiz(34, '11x11 to 100 +?', 45, 55, 29, 11, 11),
     new Quiz(35, '11x11 to 100 +?', '2x11', '1x11', 22, 33, '1x11'),
@@ -209,16 +211,18 @@ const advancedQaA = [
 
 let good = 0;
 let bad = 0;
+let current = '';
 
+//Wczytanie pytania i odpowiedzi:
 function load(arr, count){
     let random = Math.floor(Math.random() * count) + 1;
     return arr.filter((item) =>{
         if(item.id === random){
             questions.innerHTML = item.question;
-            let answer1 = document.createElement("button");
-            let answer2 = document.createElement("button");
-            let answer3 = document.createElement("button");
-            let answer4 = document.createElement("button");
+            let answer1 = document.createElement("span");
+            let answer2 = document.createElement("span");
+            let answer3 = document.createElement("span");
+            let answer4 = document.createElement("span");
             answer1.setAttribute("class", "answer");
             answer2.setAttribute("class", "answer");
             answer3.setAttribute("class", "answer");
@@ -231,36 +235,60 @@ function load(arr, count){
             answer2.innerHTML = item.answer2;
             answer3.innerHTML = item.answer3;
             answer4.innerHTML = item.answer4;
-            $(".answer").click(function(e){
-                let height = history.scrollHeight;
-                history.scrollTo(0, height);
-                let element = e.target.innerHTML;
-                if(element == item.correct){
-                    icon.innerHTML = '<img src="icons/happiness.png">';
-                    good = good + 1;
-                    $('#good').html('Dobre: ' + good);
-                    let ol = document.createElement('ol');
-                    history.appendChild(ol);
-                    ol.innerHTML = item.question + ' (' + item.correct + ')';
-                    $('.answer').addClass('prevent-click');
-                }else{
-                    icon.innerHTML = '<img src="icons/sad.png">';
-                    bad = bad + 1;
-                    $('#bad').html('Złe: ' + bad);
-                    let ol = document.createElement('ol');
-                    history.appendChild(ol);
-                    ol.style = 'color:red';
-                    ol.innerHTML = item.question + ' (' + element + ')';
-                }
-            });
+            current = item;
         }
     })
 }
+//
+
+//Obsługa odpowiedzi:
+$("#solution").change(function(e){
+    let height = history.scrollHeight;
+    history.scrollTo(0, height);
+    let element = e.target.value;
+    if(element == current.correct){
+        icon.innerHTML = '<img src="icons/happiness.png">';
+        good = good + 1;
+        $('#good').html('Dobre: ' + good);
+        let ol = document.createElement('ol');
+        history.appendChild(ol);
+        ol.innerHTML = current.question + ' (' + current.correct + ')';
+        solution.disabled = true;
+    }else{
+        icon.innerHTML = '<img src="icons/sad.png">';
+        bad = bad + 1;
+        $('#bad').html('Złe: ' + bad);
+        let ol = document.createElement('ol');
+        history.appendChild(ol);
+        ol.style = 'color:red';
+        ol.innerHTML = current.question + '(' + element + ')';
+        solution.value = '';
+    }
+});
+//
 
 let basicStatus = null;
 let simpleStatus = null;
 let advancedStatus = null;
 
+//Pomocnicze:
+function show(){
+    Object.assign(answers.style, {height:"50%", display: "grid"});
+    Object.assign(solution.style, {display:"block"});
+    Object.assign(exit.style, {display:"block"});
+}
+
+function clear(){
+    icon.innerHTML = '';
+    answers.innerHTML = '';
+    questions.innerHTML = '';
+    solution.disabled = false;
+    solution.value = '';
+    solution.focus();
+}
+//
+
+//Rozpoczęcie odpowiedniego quizu:
 function start(){
     questions.innerHTML = "Jaki Quiz chcesz rozegrać?";
     const basic = document.createElement('button');
@@ -269,9 +297,9 @@ function start(){
     basic.setAttribute('id', 'basic');
     simple.setAttribute('id', 'simple');
     advanced.setAttribute('id', 'advanced');
-    basic.setAttribute('class', 'answer');
-    simple.setAttribute('class', 'answer');
-    advanced.setAttribute('class', 'answer');
+    basic.setAttribute('class', 'answerBefore');
+    simple.setAttribute('class', 'answerBefore');
+    advanced.setAttribute('class', 'answerBefore');
     basic.innerHTML = 'Podstawowy Quiz';
     simple.innerHTML = 'Prosty Quiz';
     advanced.innerHTML = 'Zaawansowany Quiz';
@@ -282,39 +310,46 @@ function start(){
         answers.innerHTML = '';
         basicStatus = 1;
         load(basicQaA, 33);
+        show();
     })
     simple.addEventListener('click', () =>{
         answers.innerHTML = '';
         simpleStatus = 1;
         load(simpleQaA, 100);
+        show();
     })
     advanced.addEventListener('click', () =>{
         answers.innerHTML = '';
         advancedStatus = 1;
         load(advancedQaA, 50);
+        show();
     })
 }
 
 window.addEventListener('load', () => {
     start();
 })
+//
 
+//Nastepne pytanie:
 $("#btn").click(function(){
     let iconStatus = '<img src="icons/happiness.png">';
     let htmlStatus = icon.innerHTML;
     if(iconStatus == htmlStatus && basicStatus === 1){
-        icon.innerHTML = '';
-        answers.innerHTML = '';
+        clear();
         load(basicQaA, 33);
     }
     else if(iconStatus == htmlStatus && simpleStatus === 1){
-        icon.innerHTML = '';
-        answers.innerHTML = '';
+        clear();
         load(simpleQaA, 100);
     }
     else if(iconStatus == htmlStatus && advancedStatus === 1){
-        icon.innerHTML = '';
-        answers.innerHTML = '';
+        clear();
         load(advancedQaA, 50);
     }
+});
+//
+
+$("#exit").click(function(){
+    window.location.reload();
 });

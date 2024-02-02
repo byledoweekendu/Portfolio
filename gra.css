@@ -42,7 +42,7 @@ body{
 
 #buttons{
     height: 3vh;
-    width: 60%;
+    width: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -74,7 +74,7 @@ span{
 }
 
 #reset, #show{
-    width: 15%;
+    width: 13.5%;
     height: 30px;
     text-align: center;
     cursor: pointer;
@@ -90,6 +90,10 @@ span{
     margin-left: 50px;
 }
 
+#reset{
+    margin-left: 15.5%;
+}
+
 .btn:hover{
     background-color: rgb(60, 60, 60);
     transition: background-color 300ms;
@@ -101,3 +105,34 @@ span{
     transition: background-color 300ms;
     color: silver;
 }
+  
+  @media only screen and (max-width: 1024px) {
+    #reset, #show{
+        width: 20%;
+    }
+    #reset{
+        margin-left: 7.5%;
+    }
+    #letters{
+        width: 35%;
+        height: 55vh;
+    }
+    #nextTo{
+        width: 100%;
+    }
+    #image{
+        margin-left: 10%;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .btn{
+        width: 100px;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {   
+    .btn{
+        height: 1px;
+    }
+  }

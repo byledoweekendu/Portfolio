@@ -1,5 +1,7 @@
 //Uchwyty:
 let foodInput = document.querySelector("#food");
+let candyInput = document.querySelector("#candy");
+let habbitsInput = document.querySelector("#habbits");
 let chemistryInput = document.querySelector("#chemistry");
 let fuelInput = document.querySelector("#fuel");
 let medsInput = document.querySelector("#meds");
@@ -7,6 +9,8 @@ let billsInput = document.querySelector("#bills");
 let othersInput = document.querySelector("#others");
 let salaryInput = document.querySelector("#salary");
 let foodSum = document.querySelector("#food-sum");
+let candySum = document.querySelector("#candy-sum");
+let habbitsSum = document.querySelector("#habbits-sum");
 let chemistrySum = document.querySelector("#chemistry-sum");
 let fuelSum = document.querySelector("#fuel-sum");
 let medsSum = document.querySelector("#meds-sum");
@@ -25,7 +29,13 @@ let inputs = document.querySelector("#inputs");
 function setStorage(){
 if(localStorage.getItem('food') == null){
       localStorage.setItem('food', 0);
-  }
+}
+if(localStorage.getItem('candy') == null){
+  localStorage.setItem('candy', 0);
+}
+if(localStorage.getItem('habbits') == null){
+  localStorage.setItem('habbits', 0);
+}
 if(localStorage.getItem('chemistry') == null){
     localStorage.setItem('chemistry', 0);
 }
@@ -59,6 +69,8 @@ function drawList(arr){
 
 function load(){
   let food = JSON.parse(localStorage.getItem('food'));
+  let candy = JSON.parse(localStorage.getItem('candy'));
+  let habbits = JSON.parse(localStorage.getItem('habbits'));
   let chemistry = JSON.parse(localStorage.getItem('chemistry'));
   let fuel = JSON.parse(localStorage.getItem('fuel'));
   let meds = JSON.parse(localStorage.getItem('meds'));
@@ -66,12 +78,14 @@ function load(){
   let others = JSON.parse(localStorage.getItem('others'));
   let salary = JSON.parse(localStorage.getItem('salary'));
   let list = JSON.parse(localStorage.getItem('list'));
-  let foodAndChemistry = food + chemistry;
-  let general = food + chemistry + fuel + meds + bills + others;
+  let foodAndChemistry = food + candy + habbits + chemistry;
+  let general = food + candy + habbits + chemistry + fuel + meds + bills + others;
   let bilance = salary - general;
   localStorage.setItem('FAC', JSON.stringify(parseFloat(foodAndChemistry)));
   localStorage.setItem('general', JSON.stringify(parseFloat(sum)));
   foodSum.innerHTML = food.toFixed(2) + 'zł';
+  candySum.innerHTML = candy.toFixed(2) + 'zł';
+  habbitsSum.innerHTML = habbits.toFixed(2) + 'zł';
   chemistrySum.innerHTML = chemistry.toFixed(2) + 'zł';
   fuelSum.innerHTML = fuel.toFixed(2) + 'zł';
   medsSum.innerHTML = meds.toFixed(2) + 'zł';
@@ -79,7 +93,7 @@ function load(){
   othersSum.innerHTML = others.toFixed(2) + 'zł';
   bilanceSum.innerHTML = bilance.toFixed(2) + 'zł';
   foodAndChemistrySum.innerHTML = foodAndChemistry.toFixed(2) + 'zł';
-  generalSum.innerHTML = general.toFixed(2) + 'zł';
+  generalSum.innerHTML = '- ' + '\xa0' + general.toFixed(2) + 'zł' + '</br>' +  '+ ' + salary.toFixed(2) + 'zł';
   drawList(list);
 }
 
@@ -98,6 +112,34 @@ const addFood = () =>{
   localStorage.setItem('food', JSON.stringify(parseFloat(sum)));
   localStorage.setItem('list', JSON.stringify(list));
   foodInput.value = '';
+  load();
+  window.location.reload();
+}
+
+const addCandy = () =>{
+  let candy = JSON.parse(localStorage.getItem('candy'));
+  let list = JSON.parse(localStorage.getItem('list'));
+  let amount = candyInput.value;
+  let sum = candy + parseFloat(amount);
+  let string = "Słodycze + " + amount + "zł";
+  list.push(string);
+  localStorage.setItem('candy', JSON.stringify(parseFloat(sum)));
+  localStorage.setItem('list', JSON.stringify(list));
+  candyInput.value = '';
+  load();
+  window.location.reload();
+}
+
+const addHabbits = () =>{
+  let habbits = JSON.parse(localStorage.getItem('habbits'));
+  let list = JSON.parse(localStorage.getItem('list'));
+  let amount = habbitsInput.value;
+  let sum = habbits + parseFloat(amount);
+  let string = "Używki + " + amount + "zł";
+  list.push(string);
+  localStorage.setItem('habbits', JSON.stringify(parseFloat(sum)));
+  localStorage.setItem('list', JSON.stringify(list));
+  habbitsInput.value = '';
   load();
   window.location.reload();
 }
@@ -187,6 +229,8 @@ const addSalary = () =>{
 }
 
 foodInput.addEventListener('change', addFood);
+candyInput.addEventListener('change', addCandy);
+habbitsInput.addEventListener('change', addHabbits);
 chemistryInput.addEventListener('change', addChemistry);
 fuelInput.addEventListener('change', addFuel);
 medsInput.addEventListener('change', addMeds);
@@ -207,6 +251,8 @@ resetAll.addEventListener('click', () => {
   inputs.appendChild(sure);
   sure.addEventListener('click', () => {
     localStorage.setItem('food', 0);
+    localStorage.setItem('candy', 0);
+    localStorage.setItem('habbits', 0);
     localStorage.setItem('chemistry', 0);
     localStorage.setItem('fuel', 0);
     localStorage.setItem('meds', 0);
