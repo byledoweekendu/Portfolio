@@ -90,7 +90,7 @@ input{
     width: 40%;
     height: 25px;
     border-radius: 3px;
-    margin: 15px 0;
+    margin: 10px 0;
     outline: none;
     border: none;
     font-family: 'Exo', sans-serif;
@@ -99,9 +99,12 @@ input{
     font-style: italic;
 }
 
-#send{
+#send, a{
     width: 20%;
     height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: none;
     outline: none;
     color: black;
@@ -109,14 +112,30 @@ input{
     font-size: 1.1rem;
     background-color: rgb(18, 216, 0);
     border-radius: 5px;
-    margin: 15px 0;
+    margin: 7.5px 0;
     font-family: 'Exo', sans-serif;
+}
+
+a{
+    background-color: red;
+    text-decoration: none;
+}
+
+a:visited{
+    color: black;
+    background-color: red;
 }
 
 #send:hover{
     cursor: pointer;
     color: gray;
     background-color: rgb(48, 238, 0);
+    transition: 400ms background-color;
+}
+
+a:hover{
+    color: white;
+    background-color: orangered;
     transition: 400ms background-color;
 }
 
