@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ankieta</title>
+    <meta name="description" content="Ankieta zapoznawcza.">
+    <meta name="keywords" content="Jacek, Szymański, Ankieta">
+    <meta name="author" content="Jacek Szymański">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    <link rel="stylesheet" href="ankieta.css">
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@100;300&display=swap" rel="stylesheet">
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.pack.js"></script>
+</head>
+<body>
+    <form action="https://formsubmit.co/jacekszymanskifronenddeveloper@gmail.com" method="POST">
+    <p>Jakiej strony internetowej Pan/Pani potrzebuje?</p>
+    <div id="nextTo">
+    <label for="need1"><input type="checkbox" name="Chcę wizytówkę" id="need1">Najprostszej wizytówki</label>
+    <label for="need2"><input type="checkbox" name="Chcę projekt indywidualny" id="need2">Projekt indywidualny</label>
+    <label for="need3"><input type="checkbox" name="Nie potrzebuję strony" id="need3">Nie potrzebuję strony</label>
+    </div>
+    <p>Czy potrafi Pan/Pani obsługiwać hosting i załadować tam swoją stronę?</p>
+    <div class="next">
+    <label for="can" class="label"><input type="checkbox" name="Potrafię obsłużyć hosting" id="can">Tak</label>
+    <label for="cannot" class="label2"><input type="checkbox" name="Nie potrafię obsłużyć hostingu" id="cannot">Nie</label>
+    </div>
+    <p>Czy ma Pan/Pani wizytówkę w google?</p>
+    <div class="next">
+    <label for="have" class="label"><input type="checkbox" name="Mam wizytówkę" id="have">Tak</label>
+    <label for="dont" class="label2"><input type="checkbox" name="Nie mam wizytówki" id="dont">Nie</label>
+    </div>
+    <p>Czy chce Pan/Pani zoptymalizować wizytówkę w google?</p>
+    <div class="next">
+    <label for="yes" class="label"><input type="checkbox" name="Chcę zoptymalizować wizytówkę" id="yes">Tak</label>
+    <label for="no" class="label2"><input type="checkbox" name="Nie chcę optymalizować wizytówki" id="no">Nie</label>
+    </div>
+    <p>Czy chce Pan/Pani abym zarządzał wizytówką w google?</p>
+    <div class="next">
+    <label for="want" class="label"><input type="checkbox" name="Chcę zarządzania wizytówką" id="want">Tak</label>
+    <label for="dontWant" class="label2"><input type="checkbox" name="Nie chcę zarządzania wizytówką" id="dontWant">Nie</label>
+    </div>
+    <input type="hidden" name="_next" value="https://jacekszymanskiportfolio.cba.pl/dziekuje.html">
+    <input type="hidden" name="_subject" value="Nowa ankieta">
+    <input type="hidden" name="_captcha" value="false">
+    <input id="mail" class="input" name="Email" type="mail" placeholder="Adres email" required/>
+    <input id="number" class="input" name="Telefon" type="number" placeholder="Numer telefonu(opcjonalne)"/>
+    <input id="send" value="Wyślij" type="submit"/>
+    </form>
+</body>
+</html>

@@ -1,0 +1,182 @@
+::-webkit-scrollbar {
+    width: 15px;
+}
+  
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px silver;
+    border-radius: 10px;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: rgb(35, 35, 35);
+    border-radius: 10px;
+}
+
+html{
+    scroll-behavior: smooth;
+    font-family: 'Exo', sans-serif;
+}
+
+body{
+    background-color: rgb(40,40,40);
+    margin: 0;
+    border: 0;
+    font-family: 'Exo', sans-serif;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    width: 60%;
+    height: 100%;
+    padding: 0.5%;
+    margin: 30px 0 30px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: gray 0px 13px 27px -5px, gray 0px 8px 16px -8px;
+    font-family: 'Exo', sans-serif;
+    border-radius: 10px;
+}
+
+.next, #nextTo{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 15px 0;
+}
+
+label{
+    width: 100%;
+    color: gold;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Exo', sans-serif;
+}
+
+.label,.label2{
+    width: 30%;
+    justify-content: flex-end;
+    font-size: 1.15rem;
+}
+
+.label2{
+    justify-content: flex-start;
+}
+
+p{
+    font-size: 1.5rem;
+    color: rgb(0, 255, 234);
+    font-family: 'Exo', sans-serif;
+}
+
+input{
+    width: 15px;
+    height: 15px;
+    border-radius: 1%;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.input{
+    width: 50%;
+    height: 25px;
+    border-radius: 3px;
+    margin: 15px 0;
+    outline: none;
+    border: none;
+    font-family: 'Exo', sans-serif;
+    font-size: 0.85rem;
+    font-weight: bold;
+    font-style: italic;
+}
+
+#send{
+    width: 20%;
+    height: 30px;
+    border: none;
+    outline: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1.1rem;
+    background-color: rgb(18, 216, 0);
+    border-radius: 5px;
+    margin: 15px 0;
+    font-family: 'Exo', sans-serif;
+}
+
+#send:hover{
+    cursor: pointer;
+    color: gray;
+    background-color: rgb(48, 238, 0);
+    transition: 400ms background-color;
+}
+
+@media only screen and (max-width: 1366px) {
+   p{
+    font-size: 1.25rem;
+   }
+  }
+  
+  @media only screen and (max-width: 1152px) {
+    p{
+        font-size: 1rem;
+    }
+  }
+
+  @media only screen and (max-width: 1024px) {
+    form{
+        width: 75%;
+    }
+    #send{
+        font-size: 0.9rem;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    form{
+        width: 85%;
+    }
+    label{
+        font-size: 0.9rem;
+    }
+    p{
+        text-align: center;
+    }
+  }
+    
+  @media only screen and (max-width: 600px) {
+    form{
+        width: 100%;
+        box-shadow: none;
+    }
+    .label, .label2, label, p{
+        font-size: 0.9rem;
+    }
+    #nextTo{
+        flex-direction: column;
+        margin: 2.5%;
+    }
+    label{
+        margin: 1.5%;
+    }
+    .input{
+        width: 75%;
+    }
+  }
+
+  @media only screen and (max-width: 425px) {
+    form{
+        width: 95%;
+        padding: 2.5%;
+        margin: 25px 2.5% 25px 2.5%;
+    }
+  }

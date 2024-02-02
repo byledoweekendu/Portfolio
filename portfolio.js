@@ -37,8 +37,6 @@ const projects = `<span class="text2">Strony/Programy:</span>
 	<a href="sklep.html" target="_blank" class="projectTile"><span class="projectName">Sklep</span><img src="img portfolio/sklep.jpg" class="projectImg" alt="Sklep"/></a>
 	<a href="przepisy.html" target="_blank" class="projectTile"><span class="projectName">Przepisy</span><img src="img portfolio/przepisy.jpg" class="projectImg" alt="Przepisy"/></a>
     <a href="kalkulator.html" target="_blank" class="projectTile"><span class="projectName">Kalkulator wydatków</span><img src="img portfolio/kalkulator.jpg" class="projectImg" alt="Kalkulator"/></a>
-    <a href="quiz.html" target="_blank" class="projectTile"><span class="projectName">Quiz tabliczka mnożenia</span><img src="img portfolio/quiz.jpg" class="projectImg" alt="Quiz"/></a>
-    <a href="gra.html" target="_blank" class="projectTile"><span class="projectName">Gra w zgadywanie</span><img src="img portfolio/gra.jpg" class="projectImg" alt="Gra"/></a>
 </div>
 <span class="text2">Wizytówki:</span>
 <div class="projects">
@@ -72,7 +70,8 @@ const contact = `<form action="https://formsubmit.co/jacekszymanskifronenddevelo
 <textarea id="msg" name="msg" rows="3" placeholder="Wpisz wiadomość" required></textarea>
 <input id="send" value="Wyślij" type="submit"/>
 </form>
-<p id="refund">Skontaktuj się ze mną przez powyższy formularz lub social media poniżej.</p>`;
+<p id="refund">Skontaktuj się ze mną przez powyższy formularz lub social media poniżej albo:</p>
+<a href="ankieta.html" id="order">Zamów usługę</a>`;
 //
 
 //Nav:

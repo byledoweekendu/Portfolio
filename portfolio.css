@@ -313,6 +313,17 @@ a{
     text-decoration: none;
 }
 
+#order{
+    color: greenyellow;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 25px;
+}
+
 .btn, .btnM{
     width: 9%;
     height: 40px;
@@ -340,6 +351,11 @@ a{
     font-size: 1.15rem;
     color: rgb(211, 255, 146);
     transition: 400ms font-size;
+}
+
+#order:hover{
+    color: rgb(211, 255, 146);
+    transition: 400ms color;
 }
 
 .projectImg:hover, .projectTile:hover, .contactTile:hover{
