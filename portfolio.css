@@ -314,7 +314,7 @@ a{
 }
 
 #order{
-    color: greenyellow;
+    color: coral;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -347,6 +347,10 @@ a{
     height: 20px;
 }
 
+#order:visited{
+    color: coral;
+}
+
 .btn:hover{
     font-size: 1.15rem;
     color: rgb(211, 255, 146);
@@ -354,7 +358,7 @@ a{
 }
 
 #order:hover{
-    color: rgb(211, 255, 146);
+    color: rgb(255, 150, 112);
     transition: 400ms color;
 }
 
