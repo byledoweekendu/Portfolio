@@ -493,6 +493,7 @@ a{
     .btnM{
         justify-content: center;
         align-items: center;
+        margin-right: 0;
     }
     #hi, #profession{
         font-size: 1.5rem;
