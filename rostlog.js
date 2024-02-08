@@ -19,7 +19,7 @@
 		
 			function changeImg()
 			{
-                if (nrImg > 8) nrImg = 1;
+                if (nrImg > 9) nrImg = 1;
 
                 $("#photos").html("<img src='zdjecia/baner" + nrImg + ".jpg' class='photo'>");
 
