@@ -434,6 +434,9 @@ textarea{
     #page-2, #page-3{
         font-size: 0.9rem;
     }
+    #page-1{
+        margin-top: 7.5%;
+    }
   }
 
   @media only screen and (max-width: 425px){
