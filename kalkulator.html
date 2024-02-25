@@ -8,7 +8,8 @@
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
     <link rel="stylesheet" href="kalkulator.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@100;300&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.pack.js"></script>
   </head>
   <body>
     <div id="content">
@@ -16,6 +17,7 @@
         <div id="nextTo">
           <button id="resetList" class="reset">Reset Historii</button>
           <button id="resetAll" class="reset">Reset Programu</button>
+          <button id="resume" class="reset">Podsumowanie</button>
         </div>
         <div id="inputs">
             <input type="number" id="food" placeholder="Za spożywcze">
@@ -24,6 +26,8 @@
             <input type="number" id="chemistry" placeholder="Za chemię">
             <input type="number" id="meds" placeholder="Za leki">
             <input type="number" id="fuel" placeholder="Za paliwo">
+            <input type="number" id="fun" placeholder="Za rozrywkę">
+            <input type="number" id="wear" placeholder="Za ubrania">
             <input type="number" id="bills" placeholder="Za rachunki">
             <input type="number" id="others" placeholder="Za inne">
             <input type="number" id="salary" placeholder="Przychód">
@@ -37,17 +41,25 @@
         <div class="counters">
           <div class="counter"><span class="descr">Leki:</span><span id="meds-sum"></span></div>
           <div class="counter"><span class="descr">Paliwo:</span><span id="fuel-sum"></span></div>
-          <div class="counter"><span class="descr">Rachunki:</span><span id="bills-sum"></span></div>
-          <div class="counter"><span class="descr">Inne:</span><span id="others-sum"></span></div>
+          <div class="counter"><span class="descr">Rozrywka:</span><span id="fun-sum"></span></div>
+          <div class="counter"><span class="descr">Ubrania:</span><span id="wear-sum"></span></div>
         </div>
         <div class="counters">
-          <div class="counter"><span class="descr">Spoż & Chemia:</span><span id="foodAndChemistrySum"></span></div>
-          <div class="counter"><span class="descr">Suma:</span><span id="sum"></span></div>
+          <div class="counter"><span class="descr">Rachunki:</span><span id="bills-sum"></span></div>
+          <div class="counter"><span class="descr">Inne:</span><span id="others-sum"></span></div>
+          <div class="counter"><span class="descr2">Spożywcze i Chemia:</span><span id="foodAndChemistrySum"></span></div>
+          <div class="counter"><span class="descr2">Wydane/Wpływy:</span><span id="sum"></span></div>
+        </div>
+        <div class="counters">
           <div class="counter"><span class="descr">Bilans:</span><span id="diff"></span></div>
           <div class="counter" id="last"><h2>Historia:</h2><div id="list"></div></div>
         </div>
     </div>
+    <div id="footer">
+      <strong>Kontakt:</strong>
+      <a href= "https://www.linkedin.com/in/jacek-szyma%C5%84ski-016a9125a" target="_blank" class="contactTile"><img src="img portfolio/linked.png" class="contactImg" alt="LinkedIn"/></a>
+      <a href= "https://www.facebook.com/profile.php?id=61554496353319&notif_id=1703269762646922&notif_t=page_user_activity&ref=notif" target="_blank" class="contactTile"><img src="img portfolio/fb.png" class="contactImg" alt="Facebook"/></a>
+    </div>
     <script src="kalkulator.js"></script> 
   </body>
-
 </html>
