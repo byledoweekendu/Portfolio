@@ -302,11 +302,12 @@ p{
 }
   
 li{
-    height: 25px;
+    height: 35px;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
 }  
 
 a{
@@ -344,7 +345,8 @@ a{
 
 .btnM{
     background-color: rgb(50, 50, 50);
-    height: 20px;
+    height: 30px;
+    font-size: 1rem;
 }
 
 #order:visited{
@@ -530,20 +532,19 @@ a{
         top: 60px;
         left: 0;
         background-color: #333;
+        height: 90vh;
     }
     .menu.show{
         display: flex;
-    }
-    li{
-        margin: 7.5px;
-        text-align: center;
+        justify-content: space-around;
+        align-items: center;
     }
   }
     
   @media only screen and (max-width: 600px) {
     .btnM{
         width: 25%;
-        font-size: 0.75rem;
+        font-size: 0.85em;
     }
     #hi, #profession{
         font-size: 1.25rem;
@@ -622,9 +623,6 @@ a{
   }
 
   @media only screen and (max-width: 375px) {
-    .btnM{
-        font-size: 0.6rem;
-    }
     #profession{
         font-size: 0.8rem;
     }
