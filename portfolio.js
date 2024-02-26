@@ -94,24 +94,6 @@ $("#aboutM").click(function(){
 	}, 750)
 });
 
-$("#card").click(function(){
-	$("#display").fadeOut(750);
-	$("#display").fadeIn(750);
-	setTimeout(() => {
-		$("#display").html(card);
-		document.querySelector('#scrollPoint').scrollIntoView();
-	}, 750)
-});
-
-$("#cardM").click(function(){
-	$("#display").fadeOut(750);
-	$("#display").fadeIn(750);
-	setTimeout(() => {
-		$("#display").html(card);
-		document.querySelector('#scrollPoint').scrollIntoView();
-	}, 750)
-});
-
 $("#skills").click(function(){
 	$("#display").fadeOut(750);
 	$("#display").fadeIn(750);
@@ -198,9 +180,6 @@ document.addEventListener('DOMContentLoaded', function(){
     $("#aboutM").click(function(){
         menu.classList.toggle('show');
     });
-	$("#cardM").click(function(){
-		menu.classList.toggle('show');
-	});
     $("#skillsM").click(function(){
         menu.classList.toggle('show');
     });
