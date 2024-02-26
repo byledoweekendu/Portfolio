@@ -46,6 +46,7 @@ nav{
     position: sticky;
     top: 0;
     z-index: 1;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 #nextTo1, #nextTo2{
@@ -198,7 +199,7 @@ nav{
 .contactTile, .contactImg{
     width: 75px;
     height: 75px;
-    border-radius: 25px;
+    border-radius: 7px;
 }
 
 section{
@@ -302,7 +303,7 @@ p{
 }
   
 li{
-    height: 35px;
+    height: 50px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -345,7 +346,7 @@ a{
 
 .btnM{
     background-color: rgb(50, 50, 50);
-    height: 30px;
+    height: auto;
     font-size: 1rem;
 }
 
@@ -395,6 +396,8 @@ a{
         justify-content: space-around;
         position: sticky;
         top: 0;
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+        height: 50px;
     }
     #display, #nextTo1{
         width: 75%;
@@ -442,6 +445,14 @@ a{
         justify-content: center;
         align-items: center;
     }
+    .contactTile, .contactImg{
+        width: 65px;
+        height: 65px;
+    }
+    #prof{
+        margin: 0;
+        width: 50%;
+    }
   } 
 
   @media only screen and (max-width: 1366px) {
@@ -475,9 +486,6 @@ a{
     a:hover{
         font-size: 1.1rem;
     }
-    #prof{
-        margin: 0;
-    }
     #description, #cardDescr, .text4, .text5{
         margin: 0 auto;
         font-size: 1.2rem;
@@ -488,6 +496,11 @@ a{
     }
     .projects{
         width: 65%;
+    }
+    .contactTile, .contactImg{
+        width: 50px;
+        height: 50px;
+        border-radius: 5px;
     }
   }
 
@@ -539,6 +552,14 @@ a{
         justify-content: space-around;
         align-items: center;
     }
+    .contactTile, .contactImg{
+        width: 40px;
+        height: 40px;
+    }
+    .icon{
+        width: 40px;
+        height: 40px;
+    }
   }
     
   @media only screen and (max-width: 600px) {
@@ -573,10 +594,6 @@ a{
     form{
         height: 300px;
         margin-top: 0;
-    }
-    .contactTile, .contactImg{
-        width: 55px;
-        height: 55px;
     }
     #send{
         width: 25%;
@@ -616,9 +633,12 @@ a{
         font-size: 0.9rem;
     }
     .contactTile, .contactImg{
-        width: 55px;
-        height: 55px;
-        margin-left: 5%;
+        width: 30px;
+        height: 30px;
+    }
+    .icon{
+        width: 30px;
+        height: 30px;
     }
   }
 
