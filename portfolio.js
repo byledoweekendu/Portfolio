@@ -21,7 +21,7 @@ const skills = `<section id="br1"><img src="img portfolio/html.png" class="icon"
 const projects = `<span class="text2">Strony/Programy:</span>
 <div class="projects">
 	<a href="zakupy.html" target="_blank" class="projectTile"><span class="projectName">Apka Lista Zakupów</span><img src="img portfolio/lista.jpg" class="projectImg" alt="Lista Zakupów"/></a>
-	<a href="kalkulator.html" target="_blank" class="projectTile"><span class="projectName">Apka Kalkulator wydatków</span><img src="img portfolio/kalkulator.jpg" class="projectImg" alt="Kalkulator"/></a>
+	<a href="kalkulator.html" target="_blank" class="projectTile"><span class="projectName">Apka Kalkulator Wydatków</span><img src="img portfolio/kalkulator.jpg" class="projectImg" alt="Kalkulator"/></a>
 	<a href="reminder.html" target="_blank" class="projectTile"><span class="projectName">Przypominacz</span><img src="img portfolio/reminder.jpg" class="projectImg" alt="Przypominacz"/></a>
 	<a href="przepisy.html" target="_blank" class="projectTile"><span class="projectName">Przepisy</span><img src="img portfolio/przepisy.jpg" class="projectImg" alt="Przepisy"/></a>
 </div>
