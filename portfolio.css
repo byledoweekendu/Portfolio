@@ -348,6 +348,8 @@ a{
     background-color: rgb(50, 50, 50);
     height: auto;
     font-size: 1rem;
+    width: 100%;
+    align-items: center;
 }
 
 #order:visited{
