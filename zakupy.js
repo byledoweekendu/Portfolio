@@ -1,3 +1,9 @@
+/*
+ * Sortable.js v[wersja 1.14.0]
+ * (c) 2019 Wszyscy współtwórcy Sortable
+ * Licencja MIT
+*/
+
 //Uchwyty:
 const body = document.querySelector('body');
 const container = document.querySelector("#container");
