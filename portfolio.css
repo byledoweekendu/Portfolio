@@ -532,7 +532,7 @@ a{
         top: 60px;
         left: 0;
         background-color: #333;
-        height: 90vh;
+        height: 75vh;
     }
     .menu.show{
         display: flex;
