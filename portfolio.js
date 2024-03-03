@@ -43,7 +43,7 @@ Cena projektu i wdrożenia strony internetowej może znacznie wzrosnąć, jeśli
 Do kosztów strony należy wliczyć też hosting(do 250zł) oraz domenę i certyfikat SSL(do 100zł) na rok, aczkolwiek często za pierwszy rok są promocje i całość wyniesie do 100zł. 
 Są to orientacyjne średnie koszta.</span>`;
 
-const contact = `<form action="https://formsubmit.co/jacekszymanskifronenddeveloper@gmail.com" method="POST">
+const contact = `<form action="https://formsubmit.co/jacekszymanskiwebdeveloper@gmail.com" method="POST">
 <p>Wyślij mi wiadomość</p>
 <input id="fullName" name="name" type="text" placeholder="Wpisz swoje imię" required/>
 <input id="mail" name="mail" type="mail" placeholder="Wpisz swój email" required/>
