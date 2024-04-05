@@ -16,7 +16,7 @@ const skills = `<section id="br1"><img src="img portfolio/html.png" class="icon"
 <section id="br3"><img src="img portfolio/js.png" class="icon" alt="JS"/><span class="text3">Java Script</span></section>
 <section id="br4"><img src="img portfolio/jquery.png" class="icon" alt="jQ"/><span class="text3">jQuery</span></section>
 <section id="br5"><img src="img portfolio/react.png" class="icon" alt="React"/><span class="text3">React</span></section>
-<section id="br6"><img src="img portfolio/eng.png" class="icon" alt="Angielski"/><span class="text3">Angielski</span></section>`;
+<section id="br6"><img src="img portfolio/eng.png" class="icon" alt="Angielski"/><span class="text3">Angielski - średniozaawansowany</span></section>`;
 
 const projects = `<span class="text2">Strony/Programy:</span>
 <div class="projects">
