@@ -5,9 +5,9 @@ const home = `<span id="hi" class="text">Cześć, nazywam się</span>
 <span id="welcome" class="text">Witam serdecznie na moim portfolio.</br>Zapraszam do zapoznania się z moją twórczością oraz do kontaktu i współpracy.</span>`;
 
 const about = `<span id ="description" class="text">Początkujący frontend developer po kursie Java Script + React od podstaw.</br></br>
-Zajmuję się projektowaniem stron internetowych, a konkretnie ich wyglądem i zachowaniem po interakcji użytownika z jej elementami.</br></br> 
+Zajmuję się projektowaniem stron internetowych, a konkretnie ich wyglądem i zachowaniem elementów po interakcji użytownika.</br></br> 
 Stworzę stronę wizytówkę, portfolio lub projekt indywidualny dla firmy.</br></br>
-Zaprojektuję też program/aplikację na telefon. Jeśli masz jakiś pomysł na apkę, przedstaw go, zobaczymy co da się zrobić.</br></br>
+Zaprojektuję też program lub aplikację na telefon i nie tylko. Jeśli masz jakiś pomysł, porozmawiajmy o nim.</br></br>
 Jestem otwarty na wszelką współpracę, udział w projektach oraz zlecenia, staże i prace jako Front End Developer.</br></br>
 Zapraszam serdecznie do przejrzenia moich projektów i kontaktu.</span>`;
 
