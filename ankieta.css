@@ -161,6 +161,10 @@ input[type="checkbox"]:checked{
     background-color: greenyellow;
 }
 
+#can, #cannot{
+    margin-right: 5%;
+}
+
 @media only screen and (max-width: 1366px) {
    p{
     font-size: 1.25rem;
