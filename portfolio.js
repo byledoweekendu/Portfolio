@@ -38,9 +38,9 @@ const prices = `<span class="text4">Średni koszt strony w 2024:</span>
 zlecając stronę w dużej agencji interaktywnej. Średni koszt stworzenia strony internetowej w 2024 r. 
 na polskim rynku przez profesjonalnego wykonawcę może wynosić około 4000 do 8000 zł. 
 Cena projektu i wdrożenia strony internetowej może znacznie wzrosnąć, jeśli Twój projekt jest niestandardowy i wymaga dedykowanych rozwiązań.”</span>
-<span class="text4">U mnie strona kosztuje(zależnie od stopnia skomplikowania) od 1000zł do 2000zł, natomiast najprostsza wizytówkowa od 500zł do 750zł.</br></br>
-Do kosztów strony należy wliczyć też hosting(do 250zł) oraz domenę i certyfikat SSL(do 100zł) na rok, aczkolwiek często za pierwszy rok są promocje i całość wyniesie do 100zł. 
-Są to orientacyjne średnie koszta.</span>`;
+<span class="text4">U mnie strona kosztuje(zależnie od stopnia skomplikowania) od 750zł do 1500zł, natomiast najprostsza wizytówkowa 500zł.</br></br>
+Do kosztów strony należy wliczyć też hosting(do 250zł) oraz domenę i certyfikat SSL(do 100zł) na rok, aczkolwiek często za pierwszy rok są promocje i całość wyniesie do 100zł.</br> 
+Są to orientacyjne średnie koszta za wdrożenie i utrzymanie.</span>`;
 
 const contact = `<form action="https://formsubmit.co/jacekszymanskiwebdeveloper@gmail.com" method="POST">
 <p>Wyślij mi wiadomość</p>
